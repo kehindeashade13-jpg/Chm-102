@@ -45,7 +45,7 @@ export default function StudyTools({ initialTab = 'notes' }: StudyToolsProps) {
       <div className="flex justify-between items-center bg-white dark:bg-slate-950 p-4 rounded-2xl border border-slate-100 dark:border-slate-900 shadow-sm">
         <div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Active Recall Suite</h1>
-          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">High-yield study tools to secure your CHM 102 exam performance.</p>
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">High-yield study tools to secure your BIO 102 exam performance.</p>
         </div>
         
         <div className="flex gap-1.5 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl">

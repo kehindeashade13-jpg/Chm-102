@@ -49,9 +49,9 @@ export default function TopicsPage({ stats, onSelectTopic }: TopicsPageProps) {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Chemistry Practice Topics</h1>
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Biology Practice Topics</h1>
           <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-base mt-1">
-            Focus your practice on individual CHM 102 syllabus categories. Track scores and attempts.
+            Focus your practice on individual BIO 102 syllabus categories. Track scores and attempts.
           </p>
         </div>
         

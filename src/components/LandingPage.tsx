@@ -5,7 +5,7 @@
 
 import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
-import { Beaker, Award, BookOpen, Layers, Play, CheckCircle } from 'lucide-react';
+import { Dna, Award, BookOpen, Layers, Play, CheckCircle } from 'lucide-react';
 import { UserStats } from '../types';
 import { BANK } from '../questions';
 
@@ -86,15 +86,15 @@ export default function LandingPage({ stats, onNavigate, onStartExam }: LandingP
             )}
           </motion.div>
         ))}
-        {/* Abstract Periodic Table Elements background floating decoration */}
+        {/* Abstract biological letters background floating decoration */}
         <div className="absolute right-[5%] top-[10%] text-[8rem] font-black select-none text-slate-200/40 dark:text-slate-800/20 font-mono tracking-widest pointer-events-none">
-          C
+          A
         </div>
         <div className="absolute left-[8%] bottom-[15%] text-[6rem] font-black select-none text-slate-200/40 dark:text-slate-800/20 font-mono tracking-widest pointer-events-none">
-          H₁₀
+          T
         </div>
         <div className="absolute right-[12%] bottom-[8%] text-[7rem] font-black select-none text-slate-200/40 dark:text-slate-800/20 font-mono tracking-widest pointer-events-none">
-          O₂
+          C=G
         </div>
       </div>
 
@@ -106,8 +106,8 @@ export default function LandingPage({ stats, onNavigate, onStartExam }: LandingP
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 bg-indigo-100/80 dark:bg-indigo-950/50 backdrop-blur-md px-4 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-900/50 text-indigo-700 dark:text-indigo-300 font-medium text-sm mb-6"
         >
-          <Beaker className="w-4 h-4 text-indigo-500 animate-pulse" />
-          <span>Organic Chemistry CBT Simulator</span>
+          <Dna className="w-4 h-4 text-indigo-500 animate-pulse" />
+          <span>General Biology CBT Simulator</span>
         </motion.div>
 
         <motion.h1
@@ -116,7 +116,7 @@ export default function LandingPage({ stats, onNavigate, onStartExam }: LandingP
           transition={{ delay: 0.1, duration: 0.6 }}
           className="text-4xl sm:text-5xl md:text-6xl font-black font-sans tracking-tight text-slate-900 dark:text-white leading-tight"
         >
-          Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-500">CHM 102</span>
+          Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-500">BIO 102</span>
           <br />Like a Professional CBT
         </motion.h1>
 
@@ -126,7 +126,7 @@ export default function LandingPage({ stats, onNavigate, onStartExam }: LandingP
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl font-normal leading-relaxed"
         >
-          The complete, high-yield practice platform designed specifically for 100-level university students preparing for Organic Chemistry examinations. Complete with dynamic analysis, gamification, and full solutions.
+          The complete, high-yield practice platform designed specifically for 100-level university students preparing for General Biology examinations. Complete with dynamic analysis, gamification, and full solutions.
         </motion.p>
 
         {/* Call to Actions */}

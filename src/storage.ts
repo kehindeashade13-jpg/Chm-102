@@ -7,9 +7,9 @@ import { UserStats, Badge, ExamResult, Question } from './types';
 import { INITIAL_BADGES } from './data';
 import { BANK } from './questions';
 
-const STATS_KEY = 'chm102_stats_v1';
-const BADGES_KEY = 'chm102_badges_v1';
-const RESULTS_KEY = 'chm102_results_v1';
+const STATS_KEY = 'bio102_stats_v1';
+const BADGES_KEY = 'bio102_badges_v1';
+const RESULTS_KEY = 'bio102_results_v1';
 
 export function getStoredStats(): UserStats {
   try {
@@ -181,29 +181,28 @@ export function saveResult(result: ExamResult): { updatedStats: UserStats; unloc
   });
 
   // 6. Badge evaluation logic
-  const isAllHydrocarbonsPerfect = () => {
-    const hcQuizKeys = Object.keys(result.answers).filter(qId => {
+  const isGeneticsExpert = () => {
+    const geneticsKeys = Object.keys(result.answers).filter(qId => {
       const q = BANK.find(b => b.id === qId);
-      return q && ["Alkanes", "Alkenes", "Alkynes"].includes(q.sec);
+      return q && q.sec === "Cell Biology & Genetics";
     });
-    return hcQuizKeys.length >= 5 && hcQuizKeys.every(qId => result.answers[qId].isCorrect);
+    return geneticsKeys.length >= 3 && geneticsKeys.every(qId => result.answers[qId].isCorrect);
   };
 
-  const isAlcoholPerfect = () => {
-    const alcQuizKeys = Object.keys(result.answers).filter(qId => {
+  const isTaxonomyMaster = () => {
+    const taxKeys = Object.keys(result.answers).filter(qId => {
       const q = BANK.find(b => b.id === qId);
-      return q && ["Alcohols", "Ethers"].includes(q.sec);
+      return q && q.sec === "Taxonomy & Systematics";
     });
-    return alcQuizKeys.length >= 3 && alcQuizKeys.every(qId => result.answers[qId].isCorrect);
+    return taxKeys.length >= 3 && taxKeys.every(qId => result.answers[qId].isCorrect);
   };
 
-  const hasFiveConsecutiveMechanisms = () => {
-    // Let's check historical answers or current correct mechanism answers
-    const mechCorrect = Object.keys(result.answers).filter(qId => {
+  const isEcologyGuru = () => {
+    const ecoCorrect = Object.keys(result.answers).filter(qId => {
       const q = BANK.find(b => b.id === qId);
-      return q && q.sec === "Reaction Mechanisms" && result.answers[qId].isCorrect;
+      return q && q.sec === "Ecology & Ecosystems" && result.answers[qId].isCorrect;
     });
-    return mechCorrect.length >= 5;
+    return ecoCorrect.length >= 5;
   };
 
   badges.forEach(b => {
@@ -211,17 +210,17 @@ export function saveResult(result: ExamResult): { updatedStats: UserStats; unloc
       let shouldUnlock = false;
 
       switch (b.id) {
-        case 'badge-1': // Organic Beginner
+        case 'badge-1': // Bio Beginner
           shouldUnlock = true; // Completed any practice quiz
           break;
-        case 'badge-2': // Hydrocarbon Expert
-          if (isAllHydrocarbonsPerfect()) shouldUnlock = true;
+        case 'badge-2': // Genetics Expert
+          if (isGeneticsExpert()) shouldUnlock = true;
           break;
-        case 'badge-3': // Alcohol Master
-          if (isAlcoholPerfect()) shouldUnlock = true;
+        case 'badge-3': // Taxonomy Master
+          if (isTaxonomyMaster()) shouldUnlock = true;
           break;
-        case 'badge-4': // Reaction Mechanism Guru
-          if (hasFiveConsecutiveMechanisms()) shouldUnlock = true;
+        case 'badge-4': // Ecology Guru
+          if (isEcologyGuru()) shouldUnlock = true;
           break;
         case 'badge-5': // 100% Club
           if (result.percentage === 100 && result.totalQuestions >= 20) shouldUnlock = true;

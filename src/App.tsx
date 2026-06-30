@@ -6,7 +6,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  Beaker, Award, Star, Flame, GraduationCap, Home, BookOpen,
+  Dna, Award, Star, Flame, GraduationCap, Home, BookOpen,
   Layers, Settings, Search, Sun, Moon, Eye, Contrast, Check, Zap, AlertCircle
 } from 'lucide-react';
 
@@ -44,7 +44,7 @@ export default function App() {
 
   // 2. Theme State ('light' | 'dark' | 'contrast')
   const [theme, setTheme] = useState<'light' | 'dark' | 'contrast'>(() => {
-    const saved = localStorage.getItem('chm102_theme_v1');
+    const saved = localStorage.getItem('bio102_theme_v1');
     return (saved as 'light' | 'dark' | 'contrast') || 'light';
   });
 
@@ -58,7 +58,7 @@ export default function App() {
     } else if (theme === 'contrast') {
       root.classList.add('contrast-theme');
     }
-    localStorage.setItem('chm102_theme_v1', theme);
+    localStorage.setItem('bio102_theme_v1', theme);
   }, [theme]);
 
   // Load and refresh stats from storage
@@ -336,13 +336,13 @@ export default function App() {
             className="flex items-center gap-2.5 cursor-pointer select-none group"
           >
             <div className="p-2 bg-gradient-to-br from-indigo-500 to-violet-600 text-white rounded-xl shadow-md group-hover:scale-105 transition-transform duration-200">
-              <Beaker className="w-5 h-5" />
+              <Dna className="w-5 h-5" />
             </div>
             <div>
               <span className="font-sans font-black text-slate-900 dark:text-white tracking-tight text-base sm:text-lg">
-                CHM 102 <span className="text-indigo-500 font-bold">Master</span>
+                BIO 102 <span className="text-indigo-500 font-bold">Master</span>
               </span>
-              <span className="block text-[10px] font-mono text-slate-400 dark:text-slate-500 leading-none">Organic Chemistry CBT</span>
+              <span className="block text-[10px] font-mono text-slate-400 dark:text-slate-500 leading-none">General Biology CBT</span>
             </div>
           </div>
 
@@ -449,7 +449,7 @@ export default function App() {
           onClick={() => handleNavigate('practice')}
           className={`flex flex-col items-center gap-1 cursor-pointer ${currentView === 'practice' ? 'text-indigo-500' : ''}`}
         >
-          <Beaker className="w-4 h-4" />
+          <Dna className="w-4 h-4" />
           <span>Practice</span>
         </button>
         <button

@@ -52,6 +52,7 @@ export default function PracticeMode({
   // 3. Actions Feedbacks
   const [copyFeedback, setCopyFeedback] = useState(false);
   const [reportFeedback, setReportFeedback] = useState(false);
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false);
 
   // Available topics for select
   const uniqueTopics = useMemo(() => {
@@ -367,21 +368,18 @@ export default function PracticeMode({
   const isAnswered = selectedAnswer !== undefined;
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-8 space-y-6">
-      {/* Quiz Progress & Timer Header */}
-      <div className="flex items-center justify-between bg-white dark:bg-slate-950 p-4 rounded-2xl border border-slate-100 dark:border-slate-900 shadow-sm">
-        <div className="flex items-center gap-4">
-          <button
-            id="btn-quit-quiz"
-            onClick={() => {
-              if (confirm('Are you sure you want to end this practice session? Progress will be lost.')) {
-                setIsQuizActive(false);
-              }
-            }}
-            className="text-xs font-semibold text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 underline cursor-pointer"
-          >
-            Quit
-          </button>
+    <>
+      <div className="w-full max-w-4xl mx-auto px-4 py-8 space-y-6">
+        {/* Quiz Progress & Timer Header */}
+        <div className="flex items-center justify-between bg-white dark:bg-slate-950 p-4 rounded-2xl border border-slate-100 dark:border-slate-900 shadow-sm">
+          <div className="flex items-center gap-4">
+            <button
+              id="btn-quit-quiz"
+              onClick={() => setShowQuitConfirm(true)}
+              className="text-xs font-semibold text-rose-500 hover:text-rose-700 dark:hover:text-rose-400 underline cursor-pointer"
+            >
+              Quit
+            </button>
           <div className="h-4 w-px bg-slate-200 dark:bg-slate-800" />
           <div className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">
             Question <span className="font-bold text-slate-800 dark:text-slate-100">{currentIndex + 1}</span> of {questions.length}
@@ -544,5 +542,48 @@ export default function PracticeMode({
         )}
       </div>
     </div>
+
+      {showQuitConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl text-rose-500 flex-shrink-0">
+                <AlertTriangle className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Quit Practice?</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                  Are you sure you want to end this practice session? Your current progress in this session will be lost.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 justify-end pt-2">
+              <button
+                id="btn-confirm-quit-practice-cancel"
+                onClick={() => setShowQuitConfirm(false)}
+                className="px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all cursor-pointer"
+              >
+                No, Keep Practicing
+              </button>
+              <button
+                id="btn-confirm-quit-practice-yes"
+                onClick={() => {
+                  setShowQuitConfirm(false);
+                  setIsQuizActive(false);
+                  onCancel();
+                }}
+                className="px-4 py-2 text-sm font-bold text-white bg-rose-500 hover:bg-rose-600 rounded-xl shadow-md shadow-rose-500/10 transition-all cursor-pointer"
+              >
+                Yes, Quit Session
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </>
   );
 }

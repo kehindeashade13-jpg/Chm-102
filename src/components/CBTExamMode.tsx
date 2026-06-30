@@ -29,6 +29,8 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
   const [timeLeft, setTimeLeft] = useState(1800); // dynamic seconds left
   const [isExamActive, setIsExamActive] = useState(false);
   const [showShortcutsInfo, setShowShortcutsInfo] = useState(false);
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false);
+  const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
 
   // Helper to shuffle arrays
   const shuffleArray = <T,>(arr: T[]): T[] => {
@@ -204,7 +206,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
           </button>
           <div>
             <h1 className="text-2xl font-black text-slate-900 dark:text-white">CBT Exam Room</h1>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Simulated formal university examination for CHM 102.</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">Simulated formal university examination for BIO 102.</p>
           </div>
         </div>
 
@@ -213,7 +215,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
             <FileText className="w-8 h-8 text-indigo-500 flex-shrink-0" />
             <div>
               <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">Official Exam Regulations</h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{questionCount} organic chemistry questions randomized from syllabus. {examDuration} minutes total time.</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{questionCount} biology questions randomized from syllabus. {examDuration} minutes total time.</p>
             </div>
           </div>
 
@@ -351,7 +353,8 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
   const isFlagged = flaggedQuestions[currentQuestion.id] || false;
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
+    <>
+      <div className="w-full max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
       {/* 1. Exam Left Side (Question Interface and Navigation Controls) */}
       <div className="lg:col-span-3 space-y-6">
         {/* Progress & Time Header */}
@@ -364,6 +367,14 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
             <div className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">
               Question <span className="font-bold text-slate-800 dark:text-slate-100">{currentIndex + 1}</span> of {questions.length}
             </div>
+            <div className="h-4 w-px bg-slate-200 dark:bg-slate-800" />
+            <button
+              id="btn-quit-exam"
+              onClick={() => setShowQuitConfirm(true)}
+              className="text-xs font-semibold text-rose-500 hover:text-rose-700 dark:hover:text-rose-400 underline cursor-pointer"
+            >
+              Quit
+            </button>
           </div>
 
           {/* 30 mins Countdown */}
@@ -440,11 +451,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
 
           <button
             id="btn-exam-submit-trigger"
-            onClick={() => {
-              if (confirm('Are you absolutely sure you want to submit your CBT exam now? Once submitted, you cannot change any answers.')) {
-                handleSubmitExam();
-              }
-            }}
+            onClick={() => setShowSubmitConfirm(true)}
             className="inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white cursor-pointer shadow-md transition-all hover:scale-102"
           >
             <span>Submit Exam</span>
@@ -549,5 +556,98 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
         </div>
       </div>
     </div>
+
+      {showQuitConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl text-rose-500 flex-shrink-0">
+                <AlertTriangle className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Quit Exam?</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                  Are you sure you want to quit the exam? Your current progress and answers will not be saved.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 justify-end pt-2">
+              <button
+                id="btn-confirm-quit-cancel"
+                onClick={() => setShowQuitConfirm(false)}
+                className="px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all cursor-pointer"
+              >
+                No, Keep Going
+              </button>
+              <button
+                id="btn-confirm-quit-yes"
+                onClick={() => {
+                  setShowQuitConfirm(false);
+                  onCancel();
+                }}
+                className="px-4 py-2 text-sm font-bold text-white bg-rose-500 hover:bg-rose-600 rounded-xl shadow-md shadow-rose-500/10 transition-all cursor-pointer"
+              >
+                Yes, Quit Exam
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {showSubmitConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 rounded-xl text-emerald-500 flex-shrink-0">
+                <Check className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Submit CBT Exam?</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                  Are you absolutely sure you want to submit your CBT exam now? Once submitted, your score will be graded and you won't be able to change any answers.
+                </p>
+                <div className="mt-3 p-3 bg-slate-50 dark:bg-slate-900 rounded-lg text-xs font-medium space-y-1">
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Answered Questions:</span>
+                    <span className="font-bold text-slate-800 dark:text-slate-200">{answeredCount} / {questions.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Remaining Unanswered:</span>
+                    <span className="font-bold text-rose-500">{questions.length - answeredCount}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-3 justify-end pt-2">
+              <button
+                id="btn-confirm-submit-cancel"
+                onClick={() => setShowSubmitConfirm(false)}
+                className="px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all cursor-pointer"
+              >
+                Go Back to Exam
+              </button>
+              <button
+                id="btn-confirm-submit-yes"
+                onClick={() => {
+                  setShowSubmitConfirm(false);
+                  handleSubmitExam();
+                }}
+                className="px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 rounded-xl shadow-md shadow-emerald-500/10 transition-all cursor-pointer"
+              >
+                Submit Exam
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </>
   );
 }

@@ -103,7 +103,7 @@ export default function ResultsPage({
         <div>
           <h1 className="text-2xl sm:text-3xl font-black">Exam Completed Successfully</h1>
           <p className="text-slate-300 text-sm sm:text-base mt-1">
-            You achieved an overall score of <span className="font-bold text-indigo-400">{result.percentage}%</span> on this CHM 102 simulation.
+            You achieved an overall score of <span className="font-bold text-indigo-400">{result.percentage}%</span> on this BIO 102 simulation.
           </p>
         </div>
 

@@ -47,9 +47,9 @@ export default function Dashboard({ stats, badges, onNavigate, onSelectTopic, on
         </div>
         <div className="relative z-10 space-y-2">
           <div className="text-xs sm:text-sm font-mono uppercase tracking-wider text-indigo-400">WELCOME STUDENT</div>
-          <h1 className="text-2xl sm:text-3xl font-black">Prepare and Master Organic Chemistry</h1>
+          <h1 className="text-2xl sm:text-3xl font-black">Prepare and Master General Biology</h1>
           <p className="text-slate-300 max-w-xl text-sm sm:text-base">
-            Your customized dashboard tracks your progress, strengths, and weaknesses to ensure you crush CHM 102 exams.
+            Your customized dashboard tracks your progress, strengths, and weaknesses to ensure you crush BIO 102 exams.
           </p>
         </div>
         <div className="mt-6 md:mt-0 relative z-10 flex flex-wrap gap-3">
@@ -264,7 +264,7 @@ export default function Dashboard({ stats, badges, onNavigate, onSelectTopic, on
 
       {/* Recommended Next Topics Section */}
       <div className="bg-white dark:bg-slate-950 p-6 rounded-2xl border border-slate-100 dark:border-slate-900 shadow-sm space-y-4">
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white">Recommended Chemistry Topics</h2>
+        <h2 className="text-lg font-bold text-slate-900 dark:text-white">Recommended Biology Topics</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {useMemo(() => {
             const list = Array.from(new Set(BANK.map(q => q.sec))).slice(0, 3);

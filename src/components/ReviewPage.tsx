@@ -79,7 +79,7 @@ export default function ReviewPage({
               {result ? 'Exam review session' : 'Comprehensive Question Bank'}
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-              {result ? `Reviewing answers from mock attempt of ${result.date}` : 'Search, filter, and study every CHM 102 syllabus question.'}
+              {result ? `Reviewing answers from mock attempt of ${result.date}` : 'Search, filter, and study every BIO 102 syllabus question.'}
             </p>
           </div>
         </div>
