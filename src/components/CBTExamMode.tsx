@@ -25,6 +25,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>({});
   
   const [examDuration, setExamDuration] = useState<number>(30); // Custom time setting from 10-30 minutes
+  const [questionCount, setQuestionCount] = useState<number>(30); // Custom question count setting from 10-100 questions
   const [timeLeft, setTimeLeft] = useState(1800); // dynamic seconds left
   const [isExamActive, setIsExamActive] = useState(false);
   const [showShortcutsInfo, setShowShortcutsInfo] = useState(false);
@@ -39,11 +40,11 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
     return newArr;
   };
 
-  // Launch the exam with a set of 30 randomized questions (or max available)
+  // Launch the exam with a set of randomized questions (or max available)
   const handleStartExam = () => {
     let examSet = shuffleArray([...BANK]);
-    if (examSet.length > 30) {
-      examSet = examSet.slice(0, 30);
+    if (examSet.length > questionCount) {
+      examSet = examSet.slice(0, questionCount);
     }
 
     // Shuffle options for each question
@@ -209,44 +210,83 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
             <FileText className="w-8 h-8 text-indigo-500 flex-shrink-0" />
             <div>
               <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">Official Exam Regulations</h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">30 organic chemistry questions randomized from syllabus. {examDuration} minutes total time.</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{questionCount} organic chemistry questions randomized from syllabus. {examDuration} minutes total time.</p>
             </div>
           </div>
 
-          {/* Exam Duration Configuration (10 - 30 minutes) */}
-          <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-100 dark:border-slate-800/80 space-y-4">
-            <div className="flex justify-between items-center">
-              <span className="text-sm font-bold text-slate-700 dark:text-slate-300">Set Exam Duration:</span>
-              <span className="text-lg font-black text-indigo-600 dark:text-indigo-400 font-mono">{examDuration} Minutes</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Exam Duration Configuration (10 - 30 minutes) */}
+            <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-100 dark:border-slate-800/80 space-y-4">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-bold text-slate-700 dark:text-slate-300">Set Exam Duration:</span>
+                <span className="text-lg font-black text-indigo-600 dark:text-indigo-400 font-mono">{examDuration} Minutes</span>
+              </div>
+              
+              <input
+                id="slider-exam-duration"
+                type="range"
+                min="10"
+                max="30"
+                step="1"
+                value={examDuration}
+                onChange={(e) => setExamDuration(parseInt(e.target.value, 10))}
+                className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+              />
+              
+              <div className="flex gap-1.5 justify-between">
+                {[10, 15, 20, 25, 30].map((preset) => (
+                  <button
+                    key={preset}
+                    id={`btn-preset-duration-${preset}`}
+                    type="button"
+                    onClick={() => setExamDuration(preset)}
+                    className={`flex-1 py-1 px-1.5 text-xs font-semibold rounded-md border transition-all ${
+                      examDuration === preset
+                        ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
+                        : "bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900"
+                    }`}
+                  >
+                    {preset}m
+                  </button>
+                ))}
+              </div>
             </div>
-            
-            <input
-              id="slider-exam-duration"
-              type="range"
-              min="10"
-              max="30"
-              step="1"
-              value={examDuration}
-              onChange={(e) => setExamDuration(parseInt(e.target.value, 10))}
-              className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
-            />
-            
-            <div className="flex gap-2 justify-between">
-              {[10, 15, 20, 25, 30].map((preset) => (
-                <button
-                  key={preset}
-                  id={`btn-preset-${preset}`}
-                  type="button"
-                  onClick={() => setExamDuration(preset)}
-                  className={`flex-1 py-1 px-2 text-xs font-semibold rounded-md border transition-all ${
-                    examDuration === preset
-                      ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
-                      : "bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900"
-                  }`}
-                >
-                  {preset}m
-                </button>
-              ))}
+
+            {/* Question Count Configuration (10 - 100 questions) */}
+            <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-100 dark:border-slate-800/80 space-y-4">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-bold text-slate-700 dark:text-slate-300">Questions to Answer:</span>
+                <span className="text-lg font-black text-indigo-600 dark:text-indigo-400 font-mono">{questionCount} Questions</span>
+              </div>
+              
+              <input
+                id="slider-question-count"
+                type="range"
+                min="10"
+                max="100"
+                step="5"
+                value={questionCount}
+                onChange={(e) => setQuestionCount(parseInt(e.target.value, 10))}
+                className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+              />
+              
+              <div className="flex gap-1.5 justify-between">
+                {[10, 20, 30, 50, 100].map((preset) => (
+                  <button
+                    key={preset}
+                    id={`btn-preset-questions-${preset}`}
+                    type="button"
+                    onClick={() => setQuestionCount(preset)}
+                    className={`flex-1 py-1 px-1.5 text-xs font-semibold rounded-md border transition-all ${
+                      questionCount === preset
+                        ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
+                        : "bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900"
+                    }`}
+                  >
+                    {preset} Qs
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
