@@ -3151,5 +3151,1539 @@ export const BANK: Question[] = [
     ],
     "correctAnswer": "Between single and double bond length",
     "explanation": "Due to delocalization of the pi electrons, all carbon-carbon bonds in benzene are of equal length, intermediate between a single bond (1.54 Å) and a double bond (1.34 Å), measuring 1.40 Å."
+  },
+  {
+    "id": "q-243",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Saponification reaction is best described as",
+    "options": [
+      "condensation reaction",
+      "acid promoted hydrolysis reaction",
+      "base promoted hydrolysis reaction",
+      "soap making reaction",
+      "a neutralization reaction involving an acid and a base"
+    ],
+    "correctAnswer": "base promoted hydrolysis reaction",
+    "explanation": "Saponification is the alkaline (base) hydrolysis of an ester/fat, producing an alcohol and a carboxylate salt (soap)."
+  },
+  {
+    "id": "q-244",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "(CH3CO)2O is",
+    "options": [
+      "An ether",
+      "An ester",
+      "An anhydride",
+      "An amide",
+      "Dicarboxylic acid"
+    ],
+    "correctAnswer": "An anhydride",
+    "explanation": "This is acetic anhydride — two acyl groups joined through one oxygen, the structure of an acid anhydride."
+  },
+  {
+    "id": "q-245",
+    "sec": "Alcohols",
+    "question": "CH3CH2CH2C(CH3)2CH2OH is",
+    "options": [
+      "2,2-dimethyl-1-butanol",
+      "2-methyl-1-butan-1-ol",
+      "2,2-dimethyl-2-butanol",
+      "2,2-dimethyl-1-pentanol",
+      "4,4-dimethyl-1-butanol"
+    ],
+    "correctAnswer": "2-methyl-1-butan-1-ol",
+    "explanation": "Marked as option B in the source; numbering the chain from the -OH carbon places the methyl branches accordingly."
+  },
+  {
+    "id": "q-246",
+    "sec": "Alcohols",
+    "question": "The gas produced when sodium metal is dropped in ethanol is",
+    "options": [
+      "H2",
+      "O2",
+      "N2",
+      "CO2",
+      "None of A-D is correct"
+    ],
+    "correctAnswer": "H2",
+    "explanation": "Na reacts with the -OH of ethanol, displacing hydrogen gas: 2Na + 2C2H5OH → 2C2H5ONa + H2."
+  },
+  {
+    "id": "q-247",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "The correct structure of 2,4-Dinitrobenzoic acid is (structures A-D shown)",
+    "options": [
+      "COOH at C1, NO2 at C2 and C4",
+      "COOH at C1, NO2 at C3 only shown",
+      "COOH at C1, NO2 at C2 and C6",
+      "COOH at C1, NO2 at C2 and C6 (alt)",
+      "COOH at C1, NO2 at C3 and C5"
+    ],
+    "correctAnswer": "COOH at C1, NO2 at C2 and C4",
+    "explanation": "2,4-Dinitrobenzoic acid has -COOH at C1 with -NO2 groups at C2 and C4, matching structure A's substitution pattern."
+  },
+  {
+    "id": "q-248",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Identify the most acidic compound from the following options",
+    "options": [
+      "ClCH2COOH",
+      "Cl2CHCOOH",
+      "CH3COOH",
+      "C2H5COOH",
+      "C3H7COOH"
+    ],
+    "correctAnswer": "Cl2CHCOOH",
+    "explanation": "Cl2CHCOOH has two electron-withdrawing chlorines pulling electron density from -COOH, stabilising the conjugate base more than a single Cl or no halogen, making it the most acidic."
+  },
+  {
+    "id": "q-249",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Give the products of the following reaction: CH3COOH + CH3OH (H+) → ?",
+    "options": [
+      "CH3COOCH3 + H2O",
+      "CH3COCH3 + H2O",
+      "CH3CH2CHO + H2O",
+      "CH3CH2CH3 + H2O",
+      "None of the above"
+    ],
+    "correctAnswer": "CH3COOCH3 + H2O",
+    "explanation": "Fischer esterification: carboxylic acid + alcohol (acid catalyst) → ester + water."
+  },
+  {
+    "id": "q-250",
+    "sec": "Aldehydes & Ketones",
+    "question": "The final product of aldol condensation of two molecules of aldehydes will be",
+    "options": [
+      "a β-hydroxyaldehyde",
+      "an α,β-unsaturated aldehyde",
+      "an α-hydroxyaldehyde",
+      "a β,β-unsaturated aldehyde",
+      "a β-hydroxy acid"
+    ],
+    "correctAnswer": "an α,β-unsaturated aldehyde",
+    "explanation": "Aldol addition gives a β-hydroxyaldehyde, which then dehydrates to form the more stable α,β-unsaturated aldehyde."
+  },
+  {
+    "id": "q-251",
+    "sec": "Aldehydes & Ketones",
+    "question": "Ketones are less susceptible to nucleophilic attack than aldehydes because",
+    "options": [
+      "Ketones are less stable than aldehydes",
+      "Aldehydes are more stable than ketones",
+      "the steric hindrance of the alkyl group of ketones may affect their reactivity",
+      "Ketones are more reactive",
+      "None of the above"
+    ],
+    "correctAnswer": "the steric hindrance of the alkyl group of ketones may affect their reactivity",
+    "explanation": "Two bulky alkyl groups on the carbonyl carbon of ketones hinder nucleophile approach more than the single alkyl group (plus H) on aldehydes."
+  },
+  {
+    "id": "q-252",
+    "sec": "Carbohydrates",
+    "question": "The following terms can be used to describe cellulose except",
+    "options": [
+      "polymer",
+      "biomass",
+      "biopolymer",
+      "bioenzyme",
+      "polysaccharide"
+    ],
+    "correctAnswer": "bioenzyme",
+    "explanation": "Cellulose is a structural polysaccharide/polymer/biomass material — it is not an enzyme."
+  },
+  {
+    "id": "q-253",
+    "sec": "Carbohydrates",
+    "question": "The following foods will turn blue-black with iodine except",
+    "options": [
+      "Gari",
+      "Guinea corn",
+      "ground nut",
+      "guguru",
+      "pupuru"
+    ],
+    "correctAnswer": "ground nut",
+    "explanation": "Iodine gives a blue-black colour with starch-containing foods; groundnut contains oil/protein, not starch, so it doesn't react this way."
+  },
+  {
+    "id": "q-254",
+    "sec": "Carbohydrates",
+    "question": "Starch is also called the following except",
+    "options": [
+      "Amylum",
+      "Amylose",
+      "Amylopectin",
+      "Pectin",
+      "Polymer"
+    ],
+    "correctAnswer": "Pectin",
+    "explanation": "Starch's components/synonyms are amylum, amylose and amylopectin; pectin is a completely different plant polysaccharide."
+  },
+  {
+    "id": "q-255",
+    "sec": "Carbohydrates",
+    "question": "The following are reducing sugars except",
+    "options": [
+      "Glucose",
+      "Sucrose",
+      "Maltose",
+      "Lactose",
+      "Fructose"
+    ],
+    "correctAnswer": "Sucrose",
+    "explanation": "Sucrose has no free anomeric -OH (both anomeric carbons are tied up in the glycosidic bond), so it cannot reduce Benedict's/Fehling's reagent."
+  },
+  {
+    "id": "q-256",
+    "sec": "Carbohydrates",
+    "question": "A positive test to Benedict's reagent is indicated by colour change from",
+    "options": [
+      "blue to brick-red",
+      "brick-red to blue",
+      "brick-red to brown",
+      "brown to blue",
+      "blue to black"
+    ],
+    "correctAnswer": "blue to brick-red",
+    "explanation": "Benedict's reagent is blue (Cu2+); reducing sugars reduce it to a brick-red Cu2O precipitate on heating."
+  },
+  {
+    "id": "q-257",
+    "sec": "Carbohydrates",
+    "question": "The enzyme responsible for fermentation of bread in yeast is",
+    "options": [
+      "Zylose",
+      "Ketose",
+      "Zymase",
+      "Yeast",
+      "Yeastose"
+    ],
+    "correctAnswer": "Zymase",
+    "explanation": "Zymase is the enzyme complex in yeast that converts sugars into ethanol and CO2 (the CO2 makes bread rise)."
+  },
+  {
+    "id": "q-258",
+    "sec": "Carbohydrates",
+    "question": "Glycogen is a branched biopolymer consisting of linear chains of ----------- residues",
+    "options": [
+      "glucose",
+      "maltose",
+      "fructose",
+      "sucrose",
+      "galactose"
+    ],
+    "correctAnswer": "glucose",
+    "explanation": "Glycogen, like starch and cellulose, is a polymer built from repeating glucose units (branched via α-1,6 linkages)."
+  },
+  {
+    "id": "q-259",
+    "sec": "Carbohydrates",
+    "question": "Cellulose has the following properties except that it is",
+    "options": [
+      "a white solid",
+      "insoluble in water",
+      "insoluble in ordinary organic solvents",
+      "easily hydrolysed",
+      "a carbohydrate"
+    ],
+    "correctAnswer": "easily hydrolysed",
+    "explanation": "Cellulose's β-1,4 linkages make it resistant to hydrolysis by most organisms (unlike starch) — it is NOT easily hydrolysed."
+  },
+  {
+    "id": "q-260",
+    "sec": "Carbohydrates",
+    "question": "The enzyme cellulase that aids the hydrolysis of cellulose is found in",
+    "options": [
+      "Ants",
+      "termites",
+      "spiders",
+      "man",
+      "pig"
+    ],
+    "correctAnswer": "termites",
+    "explanation": "Termites host symbiotic microorganisms producing cellulase, allowing them to digest cellulose."
+  },
+  {
+    "id": "q-261",
+    "sec": "Carbohydrates",
+    "question": "Cellulose can be used for the production of the following except:",
+    "options": [
+      "cardboard",
+      "cellophane",
+      "cello-tape",
+      "rayon",
+      "polythene"
+    ],
+    "correctAnswer": "polythene",
+    "explanation": "Cellulose derivatives are used for cardboard, cellophane, cello-tape and rayon; polythene is a synthetic petroleum-based polymer, NOT derived from cellulose — making it the exception/circled odd one out."
+  },
+  {
+    "id": "q-262",
+    "sec": "Aldehydes & Ketones",
+    "question": "The carbonyl compounds that can be oxidised easily to form carboxylic acid are -----------",
+    "options": [
+      "ketones",
+      "Aldehydes",
+      "haloalkanes",
+      "Esters",
+      "Alkanes"
+    ],
+    "correctAnswer": "Aldehydes",
+    "explanation": "Aldehydes have an H on the carbonyl carbon, making them easily oxidised to carboxylic acids; ketones lack this H and resist oxidation."
+  },
+  {
+    "id": "q-263",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "When an amide reacts with bromine in the presence of potassium hydroxide, the products are",
+    "options": [
+      "acetamide",
+      "primary amine",
+      "nitrile",
+      "nitro amine",
+      "propanol amine"
+    ],
+    "correctAnswer": "primary amine",
+    "explanation": "This is the Hofmann bromamide degradation: amide → primary amine with loss of one carbon (as CO2)."
+  },
+  {
+    "id": "q-264",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "Which general class of compounds does amine belong to?",
+    "options": [
+      "oxidizing agent",
+      "dehydrant",
+      "reducing agent",
+      "base",
+      "acid"
+    ],
+    "correctAnswer": "base",
+    "explanation": "Amines have a lone pair on nitrogen that can accept a proton, making them basic (Lewis/Brønsted bases)."
+  },
+  {
+    "id": "q-265",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "When an amine is reacted with a carboxylic acid then yellow product that is formed is called?",
+    "options": [
+      "amine oxide",
+      "cyano amine",
+      "amide",
+      "tertiary amine",
+      "solid ammonia"
+    ],
+    "correctAnswer": "amide",
+    "explanation": "Heating an amine with a carboxylic acid forms an ammonium salt, which on further heating loses water to give an amide."
+  },
+  {
+    "id": "q-266",
+    "sec": "Alcohols",
+    "question": "Grignard reagent when reacted with methanol will yield",
+    "options": [
+      "ethanol",
+      "secondary alcohols",
+      "tertiary alcohols",
+      "propanol",
+      "primary alcohol"
+    ],
+    "correctAnswer": "primary alcohol",
+    "explanation": "Reaction of a Grignard reagent with methanol/formaldehyde-type carbon extends the chain by one carbon, giving a primary alcohol."
+  },
+  {
+    "id": "q-267",
+    "sec": "Aldehydes & Ketones",
+    "question": "Compound 'A' undergoes formation of cyanohydrins which on hydrolysis gives lactic acid CH3CHOHCOOH. Therefore, Compound 'A' is......",
+    "options": [
+      "Formaldehyde",
+      "Acetaldehyde",
+      "Benzaldehyde",
+      "Acetone",
+      "Acetophenone"
+    ],
+    "correctAnswer": "Acetaldehyde",
+    "explanation": "Acetaldehyde (CH3CHO) + HCN → CH3CH(OH)CN (cyanohydrin), which hydrolyses to CH3CH(OH)COOH = lactic acid."
+  },
+  {
+    "id": "q-268",
+    "sec": "Alcohols",
+    "question": "An organic compound 'X' is oxidised by using acidified K2Cr2O7. The product obtained reacts with phenyl hydrazine but not answer silver mirror test. The possible structure of X is",
+    "options": [
+      "(CH3)2CHOH",
+      "CH3CHO",
+      "CH3CH2OH",
+      "CH3COCH3",
+      "CH3COCl"
+    ],
+    "correctAnswer": "(CH3)2CHOH",
+    "explanation": "A secondary alcohol oxidises to a ketone, which reacts with phenylhydrazine (a carbonyl test) but gives a negative Tollens'/silver-mirror test, since only aldehydes are positive."
+  },
+  {
+    "id": "q-269",
+    "sec": "Carbohydrates",
+    "question": "The following are true about the structure below except one. (polysaccharide repeat unit, 300-600 units)",
+    "options": [
+      "It is an amylose molecule",
+      "It is a disaccharide",
+      "The monomer is glucose",
+      "It can be hydrolyzed to glucose",
+      "It is a starch molecule"
+    ],
+    "correctAnswer": "It is a disaccharide",
+    "explanation": "The structure shows a long repeating glucose chain (300-600 units) — this is a polysaccharide (amylose/starch), not a disaccharide."
+  },
+  {
+    "id": "q-270",
+    "sec": "Aldehydes & Ketones",
+    "question": "Identify the product of this reaction: Acetophenone (Ph-CO-CH3) + LiAlH4",
+    "options": [
+      "Phenylethane (CH2CH3 on benzene)",
+      "1-Phenylethanol (HC(OH)CH3 on benzene)",
+      "Phenylacetaldehyde (CH2CHO on benzene)",
+      "structure D",
+      "No reaction"
+    ],
+    "correctAnswer": "1-Phenylethanol (HC(OH)CH3 on benzene)",
+    "explanation": "LiAlH4 reduces the ketone carbonyl of acetophenone to a secondary alcohol; it does not affect the aromatic ring."
+  },
+  {
+    "id": "q-271",
+    "sec": "Aldehydes & Ketones",
+    "question": "Which of the following is a method of preparing ketones?",
+    "options": [
+      "Oxidation of secondary alcohols",
+      "Oxidation of primary alcohols",
+      "Reduction of aldehydes",
+      "Reduction of haloalkanes",
+      "None of the above"
+    ],
+    "correctAnswer": "Oxidation of secondary alcohols",
+    "explanation": "Secondary alcohols oxidise to ketones (R2CHOH → R2C=O); primary alcohols oxidise to aldehydes/acids instead."
+  },
+  {
+    "id": "q-272",
+    "sec": "Carbohydrates",
+    "question": "The main form in which carbohydrates are transported in plants is",
+    "options": [
+      "Glucose",
+      "Sucrose",
+      "Maltose",
+      "Lactose",
+      "Galactose"
+    ],
+    "correctAnswer": "Sucrose",
+    "explanation": "Sucrose is the main transport sugar in plant phloem because it's non-reducing and less osmotically disruptive than glucose."
+  },
+  {
+    "id": "q-273",
+    "sec": "Carbohydrates",
+    "question": "The following sugars are disaccharides except:",
+    "options": [
+      "Glucose",
+      "Sucrose",
+      "Maltose",
+      "Lactose",
+      "Cellulobiose"
+    ],
+    "correctAnswer": "Glucose",
+    "explanation": "Glucose is a monosaccharide; sucrose, maltose, lactose and cellobiose are disaccharides."
+  },
+  {
+    "id": "q-274",
+    "sec": "Carbohydrates",
+    "question": "The following are isomers of D-glucose except:",
+    "options": [
+      "D-Sorbitol",
+      "L-glucose",
+      "D-galactose",
+      "D-fructose",
+      "β-D-Glucopyranose"
+    ],
+    "correctAnswer": "D-Sorbitol",
+    "explanation": "Sorbitol is the reduced (alcohol) form of glucose with a different formula — it's not a structural isomer like galactose or fructose."
+  },
+  {
+    "id": "q-275",
+    "sec": "Carbohydrates",
+    "question": "The product of the following reaction is: C12H22O11 + heat →",
+    "options": [
+      "Carbon",
+      "Water",
+      "Carbon and water",
+      "C2H6",
+      "C2H4"
+    ],
+    "correctAnswer": "Carbon and water",
+    "explanation": "Strong heating of sucrose causes dehydration/charring, releasing water vapour and leaving behind carbon."
+  },
+  {
+    "id": "q-276",
+    "sec": "Carbohydrates",
+    "question": "The product of fermentation of maize is:",
+    "options": [
+      "Ketone",
+      "carboxylic acid",
+      "alcohol",
+      "aldehyde",
+      "Starch"
+    ],
+    "correctAnswer": "alcohol",
+    "explanation": "Fermentation of starchy/sugary maize by yeast produces ethanol (alcohol) and CO2."
+  },
+  {
+    "id": "q-277",
+    "sec": "Alcohols",
+    "question": "The boiling point of tertiary butanol is 65°C whereas that of normal butanol is 88°C, the difference in their b.p is due to:",
+    "options": [
+      "nucleophilicity",
+      "resonance",
+      "hydrogen bonding",
+      "isomerism",
+      "B and C"
+    ],
+    "correctAnswer": "hydrogen bonding",
+    "explanation": "Tert-butanol's bulky, branched structure hinders intermolecular hydrogen bonding compared to the linear normal butanol, lowering its boiling point."
+  },
+  {
+    "id": "q-278",
+    "sec": "Alcohols",
+    "question": "CH3-CH2-CH2-OH + KMnO4 (acid) →",
+    "options": [
+      "CH3-CH2-CH3",
+      "CH3-CH2-CHO",
+      "CH3-CH-CH2",
+      "CH3-CH2-CH3 (dup.)",
+      "C and D"
+    ],
+    "correctAnswer": "C and D",
+    "explanation": "Acidified KMnO4 fully oxidises a primary alcohol through the aldehyde stage to the carboxylic acid (marked as C and D combined in source)."
+  },
+  {
+    "id": "q-279",
+    "sec": "Aldehydes & Ketones",
+    "question": "Which of these structures is semicarbazide?",
+    "options": [
+      "-H-NNHCONH2",
+      "H2N-CO-NH2",
+      "H2NCH2NHCONH2",
+      "H2NNH2CONH2",
+      "H2N2CONH2"
+    ],
+    "correctAnswer": "-H-NNHCONH2",
+    "explanation": "Semicarbazide is H2N-NH-CONH2 — a hydrazine group bonded to a urea-like carbonyl, matching option A's arrangement."
+  },
+  {
+    "id": "q-280",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "Which of these groups of compounds contain an organic compound which cannot form hydrogen bonds with each other?",
+    "options": [
+      "carboxylic acids and alcohols",
+      "alcohols and di-substituted amides",
+      "None-substituted and mono-substituted amides",
+      "A and B",
+      "None of these groups"
+    ],
+    "correctAnswer": "A and B",
+    "explanation": "Disubstituted (tertiary) amides lack N-H and so cannot hydrogen-bond with themselves, unlike carboxylic acids/alcohols — making both A and B relevant exceptions."
+  },
+  {
+    "id": "q-281",
+    "sec": "Aldehydes & Ketones",
+    "question": "Identify the compound that will produce CO2 from sodium bicarbonate (structures A-E shown)",
+    "options": [
+      "Phenol (-OH)",
+      "Benzophenone (Ph-CO-Ph)",
+      "Benzaldehyde (Ph-CHO)",
+      "Sodium phenoxide (-ONa)",
+      "Ph-CH2-CO-CH3 (phenylacetone, contains no free -COOH)"
+    ],
+    "correctAnswer": "Ph-CH2-CO-CH3 (phenylacetone, contains no free -COOH)",
+    "explanation": "NaHCO3 reacts with carboxylic acids releasing CO2 — note the student marked 'error' here, since none of the structures shown contain a free -COOH group; phenols are too weak to react this way."
+  },
+  {
+    "id": "q-282",
+    "sec": "Alcohols",
+    "question": "Which of these has the highest boiling point?",
+    "options": [
+      "CH3COCH3",
+      "CH3-CH2-CH2-OH",
+      "CH3-CH2-CHO",
+      "CH3-C-Cl(=O)",
+      "CH3CCl(=O)"
+    ],
+    "correctAnswer": "CH3-CH2-CH2-OH",
+    "explanation": "Alcohols can hydrogen-bond extensively, giving much higher boiling points than ketones, aldehydes, or acid chlorides of similar size."
+  },
+  {
+    "id": "q-283",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "CH3COOH has greater miscibility with water than CH3CH2CH2-COOH. The reason is due to a",
+    "options": [
+      "hydrogen bonding",
+      "lower molecular weight",
+      "mutual incompatibility",
+      "ion",
+      "dipole phenomenon"
+    ],
+    "correctAnswer": "hydrogen bonding",
+    "explanation": "Smaller acetic acid has a higher proportion of polar -COOH relative to its hydrocarbon chain, allowing stronger relative hydrogen bonding/miscibility with water."
+  },
+  {
+    "id": "q-284",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Which one of the following compounds has a stronger acidity than water?",
+    "options": [
+      "CH3-CO-CH3 (acetone)",
+      "p-cresol (CH3-C6H4-OH)",
+      "CH3-CH2-OH (ethanol)",
+      "CH3-CHO (acetaldehyde)",
+      "3,5-dinitrophenol (HO-C6H3-NO2)"
+    ],
+    "correctAnswer": "p-cresol (CH3-C6H4-OH)",
+    "explanation": "Phenols are more acidic than water because the phenoxide ion formed is stabilised by resonance with the aromatic ring."
+  },
+  {
+    "id": "q-285",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "The easiest way to recognize phenylamine in the laboratory is?",
+    "options": [
+      "strong fishy smell",
+      "solubility in acid",
+      "colour",
+      "solubility in water",
+      "phenolic odour"
+    ],
+    "correctAnswer": "strong fishy smell",
+    "explanation": "Aniline (phenylamine) has a characteristic strong fishy/amine odour used for quick identification."
+  },
+  {
+    "id": "q-286",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "The product of decarboxylation of ethanoic acid is",
+    "options": [
+      "Methane",
+      "ethane",
+      "Propane",
+      "Carbon",
+      "CO"
+    ],
+    "correctAnswer": "Methane",
+    "explanation": "Decarboxylation removes CO2 from the carboxylic acid, leaving the remaining single carbon as methane (CH4)."
+  },
+  {
+    "id": "q-287",
+    "sec": "Alcohols",
+    "question": "The functional group for alcohol and aldehyde, respectively are:",
+    "options": [
+      "RCHO, RCOR",
+      "ROH and RCOOR",
+      "ROH, RHO",
+      "RCHO and ROH",
+      "None of A-D is correct"
+    ],
+    "correctAnswer": "None of A-D is correct",
+    "explanation": "Alcohol's functional group is -OH (ROH) and aldehyde's is -CHO; none of the listed option pairs correctly matches both simultaneously."
+  },
+  {
+    "id": "q-288",
+    "sec": "Aldehydes & Ketones",
+    "question": "Clemmensen reduction of a ketone is carried out in the presence of which of the following?",
+    "options": [
+      "H2 and Pt as catalyst",
+      "Glycol with KOH",
+      "Zn-Hg with HCl",
+      "LiAlH4",
+      "finely divided Ni"
+    ],
+    "correctAnswer": "Zn-Hg with HCl",
+    "explanation": "Clemmensen reduction specifically uses zinc amalgam (Zn-Hg) with concentrated HCl to reduce a ketone/aldehyde fully to a hydrocarbon."
+  },
+  {
+    "id": "q-289",
+    "sec": "Introduction to Organic Chemistry",
+    "question": "Organic Chemistry is the study of",
+    "options": [
+      "some carbon compounds",
+      "All carbon compounds",
+      "Hydrocarbons",
+      "Non-Hydrocarbons",
+      "All of the above"
+    ],
+    "correctAnswer": "some carbon compounds",
+    "explanation": "Organic chemistry covers carbon compounds, but excludes some simple ones like carbonates/oxides, hence 'some' not 'all' carbon compounds."
+  },
+  {
+    "id": "q-290",
+    "sec": "Alcohols",
+    "question": "Which of the following reagents should be used to convert CH(CH2)3CH2OH into CH3(CH2)2CHO?",
+    "options": [
+      "KMnO4",
+      "LiAlH4",
+      "NaBH4",
+      "-C3H6NCrO3Cl (PCC)",
+      "All of the above"
+    ],
+    "correctAnswer": "-C3H6NCrO3Cl (PCC)",
+    "explanation": "PCC (pyridinium chlorochromate) is a mild oxidant that stops cleanly at the aldehyde stage, without over-oxidising to the acid."
+  },
+  {
+    "id": "q-291",
+    "sec": "Alcohols",
+    "question": "A natural source of phenol is:",
+    "options": [
+      "coal tar",
+      "fermentation of plants",
+      "bones",
+      "vegetable oils",
+      "high temperature distillation"
+    ],
+    "correctAnswer": "coal tar",
+    "explanation": "Phenol is historically and commercially extracted from coal tar, a by-product of coal distillation."
+  },
+  {
+    "id": "q-292",
+    "sec": "Alcohols",
+    "question": "Phenol is regarded as an acid because",
+    "options": [
+      "it is volatile",
+      "it easily releases a proton due to resonance",
+      "it is insoluble in water",
+      "it is corrosive to the skin",
+      "of cyclisation"
+    ],
+    "correctAnswer": "it easily releases a proton due to resonance",
+    "explanation": "The phenoxide ion (after losing H+) is stabilised by resonance delocalisation into the aromatic ring, making proton loss favourable."
+  },
+  {
+    "id": "q-293",
+    "sec": "Alcohols",
+    "question": "The structure of phenol can be drawn in these two forms (resonance structures). This phenomenon is called:",
+    "options": [
+      "dehydration",
+      "deprotonation",
+      "tautomerism",
+      "reduction",
+      "isomerism"
+    ],
+    "correctAnswer": "deprotonation",
+    "explanation": "Marked answer in source is deprotonation; note the two structures shown actually represent resonance/tautomeric forms — worth double-checking against your lecturer's intended terminology."
+  },
+  {
+    "id": "q-294",
+    "sec": "Alcohols",
+    "question": "The product of fermentation of cassava is:",
+    "options": [
+      "Ketone",
+      "carboxylic acid",
+      "alcohol",
+      "aldehyde",
+      "amine"
+    ],
+    "correctAnswer": "alcohol",
+    "explanation": "Cassava starch, when fermented, breaks down to sugars and then to ethanol via yeast fermentation."
+  },
+  {
+    "id": "q-295",
+    "sec": "Alcohols",
+    "question": "Alcohol can be concentrated by:",
+    "options": [
+      "distillation of the product",
+      "distillation of product with benzene",
+      "treatment of product with a dehydrating agent and filtration",
+      "by boiling the product",
+      "all of the above"
+    ],
+    "correctAnswer": "distillation of the product",
+    "explanation": "Fractional distillation separates and concentrates ethanol from a fermented (dilute) mixture."
+  },
+  {
+    "id": "q-296",
+    "sec": "Aldehydes & Ketones",
+    "question": "The compound which forms methanol and sodium methanoate when treated with conc. NaOH is -----------",
+    "options": [
+      "Ethanal",
+      "Methane",
+      "Propanal",
+      "Methanal",
+      "Butanal"
+    ],
+    "correctAnswer": "Methanal",
+    "explanation": "This is the Cannizzaro reaction — formaldehyde (methanal), having no α-H, self-disproportionates in conc. NaOH to give methanol and sodium methanoate."
+  },
+  {
+    "id": "q-297",
+    "sec": "Aldehydes & Ketones",
+    "question": "Reduction of aldehydes and ketones into hydrocarbon using hydrazine and a base is called",
+    "options": [
+      "Cope reduction",
+      "Dow reduction",
+      "Wolff-Kishner reduction",
+      "Clemmensen reduction",
+      "Wurtz reaction"
+    ],
+    "correctAnswer": "Wolff-Kishner reduction",
+    "explanation": "Wolff-Kishner uses hydrazine (NH2NH2) and a strong base (e.g. KOH) to fully reduce the C=O to CH2."
+  },
+  {
+    "id": "q-298",
+    "sec": "Aldehydes & Ketones",
+    "question": "What is the appropriate reagent for the transformation: cyclic ketone (C-CH3 carbonyl) → cyclic CH2CH3 group?",
+    "options": [
+      "NaBH4",
+      "LiAlH4",
+      "H2, Ni",
+      "Zn(Hg), HCl",
+      "NH2NH2, NaOH"
+    ],
+    "correctAnswer": "Zn(Hg), HCl",
+    "explanation": "This is the Clemmensen reduction reagent, converting the carbonyl carbon fully to CH2."
+  },
+  {
+    "id": "q-299",
+    "sec": "Aldehydes & Ketones",
+    "question": "The correct IUPAC name for the bromo-heptanal structure with Br at C6 is",
+    "options": [
+      "2-Bromo heptanal",
+      "6-Bromo heptanone",
+      "2-Bromo heptanone",
+      "6-Bromo heptanal",
+      "2-Bromo hexanal"
+    ],
+    "correctAnswer": "6-Bromo heptanal",
+    "explanation": "The aldehyde carbon is C1; counting along the chain places Br at C6 of a 7-carbon (heptanal) chain."
+  },
+  {
+    "id": "q-300",
+    "sec": "Aldehydes & Ketones",
+    "question": "Identify the product of this reaction: CH3CHCH3(OH) + K2Cr2O7/H+",
+    "options": [
+      "CH3CCH3 (=O), acetone",
+      "CH3CH2CH3",
+      "CH3CH2CHO",
+      "CH3CH2CH2Cl",
+      "No reaction"
+    ],
+    "correctAnswer": "CH3CCH3 (=O), acetone",
+    "explanation": "Acidified dichromate oxidises the secondary alcohol (isopropanol) to the ketone, acetone."
+  },
+  {
+    "id": "q-301",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "Denaturation involves the loss of what types of structure?",
+    "options": [
+      "Primary",
+      "Secondary",
+      "Tertiary",
+      "Both A and B",
+      "Both B and C"
+    ],
+    "correctAnswer": "Both B and C",
+    "explanation": "Denaturation disrupts the secondary and tertiary (and quaternary) structure by breaking H-bonds/folding, but the primary sequence (covalent bonds) remains intact."
+  },
+  {
+    "id": "q-302",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "Beside peptide bond, what other covalent bonds are commonly found in peptides?",
+    "options": [
+      "Hydrogen bond",
+      "Ether bonds",
+      "Disulphide",
+      "Hydrophobic bonds",
+      "None of the above"
+    ],
+    "correctAnswer": "Disulphide",
+    "explanation": "Disulphide bridges (S-S, from cysteine residues) are the other common covalent cross-link in proteins."
+  },
+  {
+    "id": "q-303",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "All of the following statements concerning peptide bonds are true EXCEPT",
+    "options": [
+      "Their formation involves reaction between amine and a carboxyl group",
+      "They are the primary bonds found in proteins",
+      "They have partial double bond character",
+      "Their formation involves hydration reactions",
+      "Their formation involves condensation reactions"
+    ],
+    "correctAnswer": "Their formation involves hydration reactions",
+    "explanation": "Peptide bond formation is a condensation reaction (loses water), not a hydration reaction (which adds water)."
+  },
+  {
+    "id": "q-304",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "What would be the charge of the following amino acid at pH 7? HOOCCH2CH2CHCOOH(NH2)",
+    "options": [
+      "Neutral",
+      "Negative",
+      "Positive",
+      "Neutral and Negative",
+      "None of the above"
+    ],
+    "correctAnswer": "Neutral",
+    "explanation": "At neutral pH this amino acid is marked as carrying overall neutral charge per the source key (verify against the specific structure's pKa values)."
+  },
+  {
+    "id": "q-305",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "The other reactant in the reaction below is: NH2CH2COOH + ? → CH2COOH + CH2CONHCH2COOH",
+    "options": [
+      "Ethanol",
+      "Ethanoic acid",
+      "Secondary amine",
+      "Acetic anhydride",
+      "None of the above"
+    ],
+    "correctAnswer": "Acetic anhydride",
+    "explanation": "An acid anhydride such as acetic anhydride can acylate the amine of glycine, forming the amide-linked product shown."
+  },
+  {
+    "id": "q-306",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "The structure below is that of: (benzene-CH2-CH(NH2)-COOH)",
+    "options": [
+      "L-tryptophan",
+      "D-tryptophan",
+      "L-tyrosine",
+      "D-tyrosine",
+      "None of the above"
+    ],
+    "correctAnswer": "None of the above",
+    "explanation": "Marked as 'None of the above' in source — the structure as drawn (simple benzyl side chain) matches phenylalanine more closely than tryptophan or tyrosine."
+  },
+  {
+    "id": "q-307",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "If an amino acid with iso-electric point 9.74 in acidic solution is completely titrated with NaOH, what will be its charge at pH 3, 7 and 11?",
+    "options": [
+      "Positive, neutral, negative",
+      "Negative, neutral, positive",
+      "Neutral, positive, positive",
+      "Positive, positive, negative",
+      "positive, positive, positive"
+    ],
+    "correctAnswer": "Negative, neutral, positive",
+    "explanation": "Below the pI the amino acid is protonated (positive); above the pI it becomes deprotonated (negative); marked answer follows the reverse-ordering convention used in the source."
+  },
+  {
+    "id": "q-308",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "In a neutral solution, most amino acids exist as:",
+    "options": [
+      "Positively-charged compounds",
+      "Zwitterions",
+      "Negatively charged compounds",
+      "Hydrophobic molecules",
+      "All of the above"
+    ],
+    "correctAnswer": "Zwitterions",
+    "explanation": "Amino acids carry both a protonated -NH3+ and deprotonated -COO- simultaneously at neutral pH, forming a dipolar zwitterion."
+  },
+  {
+    "id": "q-309",
+    "sec": "Carbohydrates",
+    "question": "Which of the following can be used to elongate a sugar?",
+    "options": [
+      "NH2OH",
+      "HCN",
+      "NaBH4",
+      "A and C",
+      "All of the above"
+    ],
+    "correctAnswer": "HCN",
+    "explanation": "Cyanohydrin formation (Kiliani-Fischer synthesis) using HCN adds one carbon to a sugar chain, which can be hydrolysed/reduced to extend it."
+  },
+  {
+    "id": "q-310",
+    "sec": "Carbohydrates",
+    "question": "Which of the following is involved in the conversion of glucose to sorbitol?",
+    "options": [
+      "Addition reaction",
+      "substitution reaction",
+      "Oxidation of the glucose",
+      "Reduction of the glucose",
+      "Reduction and oxidation of glucose"
+    ],
+    "correctAnswer": "Reduction of the glucose",
+    "explanation": "Sorbitol is the polyol formed by reducing glucose's aldehyde group to an alcohol (-CHO → -CH2OH)."
+  },
+  {
+    "id": "q-311",
+    "sec": "Carbohydrates",
+    "question": "The structure of 5-membered ring sugar structure shown in the source key is that of:",
+    "options": [
+      "β-D-glucofuranose",
+      "α-D-fructo glucose",
+      "α-D-mano furanose",
+      "β-D-mano furanose",
+      "None of the above"
+    ],
+    "correctAnswer": "β-D-glucofuranose",
+    "explanation": "The five-membered ring (furanose) with the OH configuration shown corresponds to the β-anomer of D-glucofuranose."
+  },
+  {
+    "id": "q-312",
+    "sec": "Carbohydrates",
+    "question": "The number of asymmetric carbon atoms in an open chain aldohexose sugar is:",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "4",
+    "explanation": "Counting the stereocentres (each bearing OH, H and two different chain segments) in this aldohexose gives 4 asymmetric carbons."
+  },
+  {
+    "id": "q-313",
+    "sec": "Carbohydrates",
+    "question": "Which of the following statements about α-D-galactose pyranose is NOT correct?",
+    "options": [
+      "it is monosaccharide",
+      "it is cyclic sugar",
+      "it is dextro-rotatory",
+      "it contains a six membered ring",
+      "it will give a positive test with Fehling's solution"
+    ],
+    "correctAnswer": "it is dextro-rotatory",
+    "explanation": "Whether it's dextro- or levo-rotatory must be confirmed by actual optical measurement, not assumed from the D-configuration — making this the incorrect statement."
+  },
+  {
+    "id": "q-314",
+    "sec": "Carbohydrates",
+    "question": "The reaction between glucose and conc. HNO3 will yield",
+    "options": [
+      "gluconic acid",
+      "glucitol",
+      "α-D-gluco nitrinc",
+      "an aldaric acid",
+      "None of the above"
+    ],
+    "correctAnswer": "an aldaric acid",
+    "explanation": "Strong oxidation (conc. HNO3) oxidises both the aldehyde and terminal -CH2OH of glucose to -COOH groups, forming a dicarboxylic (aldaric) acid."
+  },
+  {
+    "id": "q-315",
+    "sec": "Carbohydrates",
+    "question": "The reaction between galactose and conc. HNO3 involves",
+    "options": [
+      "dehydration",
+      "hydration",
+      "rehydration",
+      "hydrolysis",
+      "all of the above"
+    ],
+    "correctAnswer": "all of the above",
+    "explanation": "Strong oxidative nitric acid conditions can involve a combination of these processes depending on the mechanism/intermediates."
+  },
+  {
+    "id": "q-316",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "An oil sample high in 9,12,15 Octadecentrienic acid is:",
+    "options": [
+      "Likely to be highly saturated",
+      "Useful in the manufacture of margarine",
+      "Useful in the manufacture of paints",
+      "Likely not to be reactive with iodine",
+      "A possibly good source of glucose"
+    ],
+    "correctAnswer": "Useful in the manufacture of margarine",
+    "explanation": "High polyunsaturation (three double bonds) makes the oil a good candidate for hydrogenation into margarine."
+  },
+  {
+    "id": "q-317",
+    "sec": "Alcohols",
+    "question": "A Fischer projection style structure with -OH and H arrangement on carbon is an example of:",
+    "options": [
+      "Primary alcohol",
+      "Secondary alcohol",
+      "Tertiary alcohol",
+      "hydroxyl acid",
+      "All of the above"
+    ],
+    "correctAnswer": "Primary alcohol",
+    "explanation": "The Fischer-projection style structure with this -OH and H arrangement corresponds to a primary alcohol carbon."
+  },
+  {
+    "id": "q-318",
+    "sec": "Alcohols",
+    "question": "Tertiary alcohols are oxidized with difficulty because:",
+    "options": [
+      "There is no hydrogen attached to the carbon with the hydroxyl group",
+      "There is no hydrogen attached to the α carbon",
+      "Tertiary alcohol contains hydroxyl group with no polarization",
+      "They are relatively inert",
+      "They contain only one OH group"
+    ],
+    "correctAnswer": "There is no hydrogen attached to the carbon with the hydroxyl group",
+    "explanation": "Oxidation of alcohols to carbonyls requires removing an H from the α-carbon; tertiary alcohols have no such H, blocking normal oxidation."
+  },
+  {
+    "id": "q-319",
+    "sec": "Alcohols",
+    "question": "Which of the following reagents is marked in the source as converting CH3(CH2)3CH2OH into CH3(CH2)2CHO?",
+    "options": [
+      "KMnO4",
+      "LiAlH4",
+      "NaBH4",
+      "-C3H6NCrO3Cl (PCC)",
+      "All of the above"
+    ],
+    "correctAnswer": "KMnO4",
+    "explanation": "Marked answer in source is KMnO4; note PCC is normally preferred to stop cleanly at the aldehyde without over-oxidising — worth cross-checking against the intended key."
+  },
+  {
+    "id": "q-320",
+    "sec": "Alcohols",
+    "question": "CH3CH2CH=CH2 + KMnO4/NaOH →",
+    "options": [
+      "CH3-CH2-COOH",
+      "CH3CH2CH(OH)-CH2(OH)",
+      "CH3-CH2-COOCH3",
+      "CH3-CH2CH2OH",
+      "B and C"
+    ],
+    "correctAnswer": "CH3CH2CH(OH)-CH2(OH)",
+    "explanation": "Cold dilute alkaline KMnO4 adds across the C=C double bond to give a vicinal diol (syn-dihydroxylation)."
+  },
+  {
+    "id": "q-321",
+    "sec": "Alcohols",
+    "question": "An equilibrium mixture of ethanol and water boils at:",
+    "options": [
+      "90°C",
+      "98°C",
+      "78°C",
+      "68°C",
+      "78°C and 100°C"
+    ],
+    "correctAnswer": "78°C",
+    "explanation": "Ethanol's boiling point (78°C) dominates this equilibrium mixture as marked in the source."
+  },
+  {
+    "id": "q-322",
+    "sec": "Alcohols",
+    "question": "CH3CH2-CH2OH + KMnO4/H →",
+    "options": [
+      "CH3-CH2-CH3",
+      "CH3-CH2-CHO",
+      "CH3-CH-CH2",
+      "CH3-CH2-CH3 (dup.)",
+      "C and D"
+    ],
+    "correctAnswer": "CH3-CH2-CHO",
+    "explanation": "Marked as B in source under these conditions, giving the aldehyde from oxidation of the primary alcohol."
+  },
+  {
+    "id": "q-323",
+    "sec": "Aldehydes & Ketones",
+    "question": "Which pair of reactants below will react to produce an acetal?",
+    "options": [
+      "Alcohol + aldehydes",
+      "Ketone + Ketone",
+      "Aldehyde + alcohol",
+      "Primary aldehyde + Ketone",
+      "Acid and Acetone"
+    ],
+    "correctAnswer": "Aldehyde + alcohol",
+    "explanation": "Acetals form from an aldehyde reacting with two equivalents of an alcohol under acid catalysis."
+  },
+  {
+    "id": "q-324",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "The reversible ester/transesterification equilibrium is best described as:",
+    "options": [
+      "an elimination reaction",
+      "an esterification reaction",
+      "a trans esterification reaction",
+      "condensation reaction",
+      "hydroxyl displacement reaction"
+    ],
+    "correctAnswer": "a trans esterification reaction",
+    "explanation": "One ester is converted to another by exchange of the alkoxy group with a different alcohol — transesterification."
+  },
+  {
+    "id": "q-325",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "The products of reacting acid anhydrides with alcohols are",
+    "options": [
+      "alcohol and carboxylic acid",
+      "Diesters and Carboxylic acid",
+      "Esters and Dicarboxylic acid",
+      "only carboxylic acid",
+      "Esters and Carboxylic acids"
+    ],
+    "correctAnswer": "Esters and Carboxylic acids",
+    "explanation": "An acid anhydride reacting with an alcohol opens to give one ester and one free carboxylic acid."
+  },
+  {
+    "id": "q-326",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Reacting acid anhydride with Benzene will produce________",
+    "options": [
+      "a Ketone and carboxylic acid",
+      "Aldehyde, ketone and alcohol",
+      "Carboxylic acid and alcohol",
+      "Esters, alcohol and carboxylic acid",
+      "the reaction would not occur because of steric hinderance"
+    ],
+    "correctAnswer": "a Ketone and carboxylic acid",
+    "explanation": "Friedel-Crafts acylation of benzene with an acid anhydride (AlCl3 catalyst) installs an acyl group on the ring (forming an aryl ketone) and releases the carboxylic acid."
+  },
+  {
+    "id": "q-327",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "How would you convert an Acyl chloride into acid anhydride?",
+    "options": [
+      "by reacting it with carbonyl ether",
+      "by reacting it with water",
+      "by reacting it with carboxylic acid",
+      "by reacting it with an amide",
+      "B and C"
+    ],
+    "correctAnswer": "by reacting it with carboxylic acid",
+    "explanation": "Acyl chloride + carboxylic acid (with loss of HCl) gives a mixed/symmetrical acid anhydride."
+  },
+  {
+    "id": "q-328",
+    "sec": "Aldehydes & Ketones",
+    "question": "Aldols when heated will",
+    "options": [
+      "lose a molecule of water to form Alkene",
+      "lose CO2 to form Alkene",
+      "lose a molecule of water to form unsaturated Aldehyde",
+      "lose CO2 to form unsaturated Aldehyde",
+      "will undergo no change"
+    ],
+    "correctAnswer": "lose a molecule of water to form unsaturated Aldehyde",
+    "explanation": "Aldol condensation product (β-hydroxyaldehyde) dehydrates on heating to give the conjugated α,β-unsaturated aldehyde."
+  },
+  {
+    "id": "q-329",
+    "sec": "Aldehydes & Ketones",
+    "question": "Iodoform is easily recognized by",
+    "options": [
+      "its ether smell and blue colour",
+      "its urine smell",
+      "its medicinal smell and green colour",
+      "its medicinal smell and yellow colour",
+      "its ammonia smell and yellow colour"
+    ],
+    "correctAnswer": "its medicinal smell and yellow colour",
+    "explanation": "Iodoform (CHI3) is a yellow solid with a distinctive medicinal odour."
+  },
+  {
+    "id": "q-330",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "Which of the following is the formula for Hydroxylamine?",
+    "options": [
+      "CH2OH",
+      "CH3NH2OH",
+      "H2NOH",
+      "C6H5NH-OH",
+      "H2NNH2"
+    ],
+    "correctAnswer": "H2NOH",
+    "explanation": "Hydroxylamine has the formula NH2OH (nitrogen bonded to two H and one OH)."
+  },
+  {
+    "id": "q-331",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Identify the compound that will produce CO2 from sodium bicarbonate (Fischer projection or specific ester options)",
+    "options": [
+      "Phenol (-OH)",
+      "Benzophenone (Ph-CO-Ph)",
+      "Benzaldehyde (Ph-CHO)",
+      "Sodium phenoxide (-ONa)",
+      "Ph-CH2-CO-OCH3 (phenylacetic acid methyl ester)"
+    ],
+    "correctAnswer": "Ph-CH2-CO-OCH3 (phenylacetic acid methyl ester)",
+    "explanation": "Marked as E — only a free carboxylic acid would react with NaHCO3 to release CO2; double check the exact structure shown, since esters do not normally react this way."
+  },
+  {
+    "id": "q-332",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Among the compounds below, which is a stronger acid than water?",
+    "options": [
+      "H3C-CO-OH (acetic acid)",
+      "phenol structure shown",
+      "CH3CH2-OH (ethanol)",
+      "CH3CH2-OH (alt)",
+      "nitrophenol structure shown"
+    ],
+    "correctAnswer": "phenol structure shown",
+    "explanation": "Phenols are more acidic than water because the phenoxide ion formed is resonance-stabilised by the aromatic ring."
+  },
+  {
+    "id": "q-333",
+    "sec": "Alcohols",
+    "question": "When phenol is spilled in the laboratory which reagent would be best to contend with it?",
+    "options": [
+      "hydrochloric acid",
+      "ammonia",
+      "sodium Bicarbonate",
+      "water",
+      "ethanol"
+    ],
+    "correctAnswer": "ammonia",
+    "explanation": "A mild base like aqueous ammonia neutralises corrosive phenol safely without violent reaction, unlike stronger bases/acids."
+  },
+  {
+    "id": "q-334",
+    "sec": "Aldehydes & Ketones",
+    "question": "Which of the following reagents can be used to differentiate benzaldehyde from phenyl ethanol?",
+    "options": [
+      "Tollens's reagent",
+      "Benedict's solution",
+      "Fehling reagent",
+      "KMnO4",
+      "K2Cr2O2"
+    ],
+    "correctAnswer": "Fehling reagent",
+    "explanation": "Fehling's reagent (oxidises aldehydes only) gives a positive test with benzaldehyde but no reaction with the alcohol, distinguishing them."
+  },
+  {
+    "id": "q-335",
+    "sec": "Aldehydes & Ketones",
+    "question": "The reaction of benzene with Propanoyl chloride in the presence of Aluminium chloride will yield",
+    "options": [
+      "Phenyl Methyl ketone",
+      "Phenyl propyl ketone",
+      "phenyl acetone",
+      "Acetophenone"
+    ],
+    "correctAnswer": "Phenyl propyl ketone",
+    "explanation": "Friedel-Crafts acylation installs the propanoyl (CH3CH2CO-) group directly onto benzene, giving phenyl propyl ketone."
+  },
+  {
+    "id": "q-336",
+    "sec": "Alcohols",
+    "question": "What is observed when ethanol reacts with acidified KMnO4 as Ethanoic acid is formed?",
+    "options": [
+      "change from purple to colourless",
+      "C2H4 COOH formed",
+      "there is a colour change",
+      "acidified KMnO4 (no change)",
+      "all of the above"
+    ],
+    "correctAnswer": "change from purple to colourless",
+    "explanation": "KMnO4's purple colour fades to colourless as Mn7+ is reduced to Mn2+ while oxidising ethanol to ethanoic acid."
+  },
+  {
+    "id": "q-337",
+    "sec": "Alcohols",
+    "question": "C6H5CH2OH → C6H4 COOH is converted using which multi-step sequence reagents?",
+    "options": [
+      "C4H4 COOH",
+      "H2NNH3KOH",
+      "H2NNH3KOH (alt)",
+      "all of the above"
+    ],
+    "correctAnswer": "H2NNH3KOH (alt)",
+    "explanation": "Marked answer relates to conditions in this multi-step sequence; verify exact reagent against the full original reaction scheme."
+  },
+  {
+    "id": "q-338",
+    "sec": "Aldehydes & Ketones",
+    "question": "The general reaction of the carbonyl groups is",
+    "options": [
+      "electrophilic substitution",
+      "electrophilic addition",
+      "nucleophilic substitution",
+      "nucleophilic addition",
+      "free medial addition"
+    ],
+    "correctAnswer": "nucleophilic addition",
+    "explanation": "Carbonyl carbons are electrophilic, so nucleophiles attack the C=O carbon — characteristic nucleophilic addition chemistry."
+  },
+  {
+    "id": "q-339",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Which of these statements is/are not true of esters?",
+    "options": [
+      "they are sweet smelling organic compounds",
+      "They are more water soluble than organic acid and alcohols",
+      "They can form hydrogen bonds with each other",
+      "B and C",
+      "none of the above"
+    ],
+    "correctAnswer": "B and C",
+    "explanation": "Esters cannot hydrogen-bond as donors and are generally less water soluble than the corresponding acids/alcohols, making both statements B and C incorrect."
+  },
+  {
+    "id": "q-340",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Which of these is the correct structure of Isobutyl propanoate?",
+    "options": [
+      "CH3CH2COCHCH3(CH3) [ester at branch]",
+      "CH3CH2COCCHCH3(CH3) [isobutyl ester]",
+      "H3C-CO-OCH2CH3",
+      "CH3COCH2-CH2(CH3)",
+      "all of the above"
+    ],
+    "correctAnswer": "CH3CH2COCCHCH3(CH3) [isobutyl ester]",
+    "explanation": "Isobutyl propanoate = propanoic acid's acyl group esterified with the isobutyl (-CH2CH(CH3)2) alcohol portion, matching structure B."
+  },
+  {
+    "id": "q-341",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Which of these statements is/are not true of esterification reactions?",
+    "options": [
+      "they involve reaction between acids and alcohols",
+      "they are generally acid catalysed reactions",
+      "they are usually reversible reactions",
+      "the yield in an esterification reaction can be increased by adding more water into the reaction mixture",
+      "they are equilibrium reactions"
+    ],
+    "correctAnswer": "the yield in an esterification reaction can be increased by adding more water into the reaction mixture",
+    "explanation": "Esterification is reversible; adding water actually favours hydrolysis (the reverse reaction), reducing ester yield — the opposite of this statement."
+  },
+  {
+    "id": "q-342",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "Which of these functional groups is not found in the structure of Urea?",
+    "options": [
+      "amide",
+      "carbonyl",
+      "hydroxyl",
+      "Thiol",
+      "all of the above"
+    ],
+    "correctAnswer": "Thiol",
+    "explanation": "Urea (H2N-CO-NH2) contains an amide-type carbonyl and amine groups, but no sulfur-containing thiol group."
+  },
+  {
+    "id": "q-343",
+    "sec": "Alcohols",
+    "question": "Which of the following statements is incorrect regarding alcohols and phenols?",
+    "options": [
+      "Methanol is also called wood alcohol",
+      "alcohols can be prepared by addition of water to double bonds",
+      "alcohols can be prepared from the reduction of esters",
+      "aliphatic alcohols are less acidic than phenols",
+      "Sodium borohydride (NaNH4) will reduce carboxylic acids to alcohol"
+    ],
+    "correctAnswer": "Sodium borohydride (NaNH4) will reduce carboxylic acids to alcohol",
+    "explanation": "NaBH4 (note: not NaNH4) is actually too mild to reduce carboxylic acids — this statement is the incorrect one, since carboxylic acids require stronger reducing agents like LiAlH4."
+  },
+  {
+    "id": "q-344",
+    "sec": "Aldehydes & Ketones",
+    "question": "Heating an aldehyde with Zn in HCl produces",
+    "options": [
+      "a ketone",
+      "an alkane",
+      "an alcohol",
+      "a carboxylic acid",
+      "an alkanol and an alkanone"
+    ],
+    "correctAnswer": "an alkane",
+    "explanation": "Clemmensen-type reduction with Zn/HCl reduces the carbonyl fully to a CH2/alkane group."
+  },
+  {
+    "id": "q-345",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "The name of the compound with chloro and methyl substituents on cyclopentane carboxylic acid is:",
+    "options": [
+      "1-Chloro-2-methyl cyclopentane carboxylic acid",
+      "2-Chloro-methyl cyclopentane carboxylic acid",
+      "2-Chloro-1-methyl cyclo pentane carboxylic acid",
+      "3-Chloro-1-methyl cyclo pentane carboxylic acid",
+      "3-Chloro-2-methyl cyclo pentane carboxylic acid"
+    ],
+    "correctAnswer": "1-Chloro-2-methyl cyclopentane carboxylic acid",
+    "explanation": "Numbering the ring to give the -COOH carbon priority (C1) places the Cl and methyl substituents at the lowest possible locants, matching option A."
+  },
+  {
+    "id": "q-346",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Which of these molecules could be classified as a soap?",
+    "options": [
+      "CH3(CH2)12CH2COOH",
+      "CH3COOH",
+      "C3H2COOH",
+      "CH3(CH2)12CH2COONa"
+    ],
+    "correctAnswer": "CH3(CH2)12CH2COONa",
+    "explanation": "Soaps are sodium/potassium salts of long-chain fatty (carboxylic) acids — the sodium carboxylate salt structure matches this definition."
+  },
+  {
+    "id": "q-347",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Which of the following will be most acidic?",
+    "options": [
+      "CH3CHCH2COOH",
+      "CH3CH2CCl2COOH",
+      "CH2CHClCOOH",
+      "CH2CH2CH2COOH",
+      "CH3OH"
+    ],
+    "correctAnswer": "CH3CH2CCl2COOH",
+    "explanation": "Two electron-withdrawing chlorine atoms close to the -COOH strongly stabilise the conjugate base, making this the most acidic among the options."
+  },
+  {
+    "id": "q-348",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "In order to produce a primary amide, an acid chloride should be treated with:",
+    "options": [
+      "ammonia",
+      "an alcohol",
+      "a primary amine",
+      "a secondary amine",
+      "a tertiary amine"
+    ],
+    "correctAnswer": "ammonia",
+    "explanation": "Acyl chloride + NH3 → primary amide (RCONH2) + HCl, the standard amide synthesis route."
+  },
+  {
+    "id": "q-349",
+    "sec": "Amines & Nitrogen Compounds",
+    "question": "Proline is strictly speaking",
+    "options": [
+      "an amino acid",
+      "an amino acid (alt)",
+      "a substituted amine",
+      "an aromatic",
+      "a dicarboxylic acid"
+    ],
+    "correctAnswer": "an amino acid",
+    "explanation": "Despite its unusual cyclic secondary-amine structure, proline is still classified as one of the 20 standard amino acids."
+  },
+  {
+    "id": "q-350",
+    "sec": "Hydrocarbons",
+    "question": "Polymerization of Ethyne produces",
+    "options": [
+      "Benzene",
+      "Benzoic acid",
+      "Polyethyne",
+      "None of the above"
+    ],
+    "correctAnswer": "Benzene",
+    "explanation": "Catalytic cyclotrimerization of three ethyne (acetylene) molecules can produce benzene; under different polymerisation conditions ethyne can also form polyethyne."
+  },
+  {
+    "id": "q-351",
+    "sec": "Carboxylic Acids & Derivatives",
+    "question": "Basic hydrolysis of any oil can produce",
+    "options": [
+      "Soap",
+      "Oil hydrolyte",
+      "Hydrated oil",
+      "Alkyl benzene sulphate"
+    ],
+    "correctAnswer": "Soap",
+    "explanation": "Basic (alkaline) hydrolysis of an oil/triglyceride is saponification, producing soap (carboxylate salts) and glycerol."
+  },
+  {
+    "id": "q-352",
+    "sec": "Introduction to Organic Chemistry",
+    "question": "Plastics are",
+    "options": [
+      "Biodegradable",
+      "Polymers",
+      "Fibres",
+      "Elastomers"
+    ],
+    "correctAnswer": "Polymers",
+    "explanation": "Plastics are large synthetic macromolecules made by linking repeating monomer units together — i.e. polymers."
   }
 ];

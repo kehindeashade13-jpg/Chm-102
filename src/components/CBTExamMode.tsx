@@ -24,7 +24,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>({});
   
-  const [examDuration, setExamDuration] = useState<number>(30); // Custom time setting from 20-60 minutes
+  const [examDuration, setExamDuration] = useState<number>(30); // Custom time setting from 10-30 minutes
   const [timeLeft, setTimeLeft] = useState(1800); // dynamic seconds left
   const [isExamActive, setIsExamActive] = useState(false);
   const [showShortcutsInfo, setShowShortcutsInfo] = useState(false);
@@ -209,7 +209,44 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
             <FileText className="w-8 h-8 text-indigo-500 flex-shrink-0" />
             <div>
               <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">Official Exam Regulations</h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">30 organic chemistry questions randomized from syllabus. 30 minutes total time.</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">30 organic chemistry questions randomized from syllabus. {examDuration} minutes total time.</p>
+            </div>
+          </div>
+
+          {/* Exam Duration Configuration (10 - 30 minutes) */}
+          <div className="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-100 dark:border-slate-800/80 space-y-4">
+            <div className="flex justify-between items-center">
+              <span className="text-sm font-bold text-slate-700 dark:text-slate-300">Set Exam Duration:</span>
+              <span className="text-lg font-black text-indigo-600 dark:text-indigo-400 font-mono">{examDuration} Minutes</span>
+            </div>
+            
+            <input
+              id="slider-exam-duration"
+              type="range"
+              min="10"
+              max="30"
+              step="1"
+              value={examDuration}
+              onChange={(e) => setExamDuration(parseInt(e.target.value, 10))}
+              className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+            />
+            
+            <div className="flex gap-2 justify-between">
+              {[10, 15, 20, 25, 30].map((preset) => (
+                <button
+                  key={preset}
+                  id={`btn-preset-${preset}`}
+                  type="button"
+                  onClick={() => setExamDuration(preset)}
+                  className={`flex-1 py-1 px-2 text-xs font-semibold rounded-md border transition-all ${
+                    examDuration === preset
+                      ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
+                      : "bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900"
+                  }`}
+                >
+                  {preset}m
+                </button>
+              ))}
             </div>
           </div>
 
@@ -218,7 +255,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
             <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
               <li className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-emerald-500" />
-                <span>Timer auto-submits when 30 minutes expire.</span>
+                <span>Timer auto-submits when {examDuration} minutes expire.</span>
               </li>
               <li className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-emerald-500" />
