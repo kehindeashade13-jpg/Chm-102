@@ -24,7 +24,8 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>({});
   
-  const [timeLeft, setTimeLeft] = useState(1800); // 30 minutes in seconds
+  const [examDuration, setExamDuration] = useState<number>(30); // Custom time setting from 20-60 minutes
+  const [timeLeft, setTimeLeft] = useState(1800); // dynamic seconds left
   const [isExamActive, setIsExamActive] = useState(false);
   const [showShortcutsInfo, setShowShortcutsInfo] = useState(false);
 
@@ -56,7 +57,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
     setCurrentIndex(0);
     setSelectedAnswers({});
     setFlaggedQuestions({});
-    setTimeLeft(1800); // 30 minutes
+    setTimeLeft(examDuration * 60); // Use custom duration
     setIsExamActive(true);
   };
 
@@ -146,7 +147,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
   // Submit Exam Function
   const handleSubmitExam = () => {
     setIsExamActive(false);
-    const timeUsed = 1800 - timeLeft;
+    const timeUsed = (examDuration * 60) - timeLeft;
 
     const answersReport: Record<string, { selected: string; correct: string; isCorrect: boolean; isSkipped: boolean }> = {};
     

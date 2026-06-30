@@ -394,9 +394,15 @@ export default function App() {
 
           {/* DE^3 Tech replaced day/night mode buttons */}
           <div className="flex items-center gap-2">
-            <span className="text-xs sm:text-sm font-black font-mono tracking-wider bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 px-3.5 py-1.5 rounded-xl border border-indigo-100 dark:border-indigo-900/30 select-none shadow-sm">
+            <a
+              href="https://wa.me/2349033006533"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs sm:text-sm font-black font-mono tracking-wider bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 px-3.5 py-1.5 rounded-xl border border-indigo-100 dark:border-indigo-900/30 shadow-sm hover:bg-indigo-100 dark:hover:bg-indigo-900/60 transition-all cursor-pointer"
+              title="Chat with DE³ Tech on WhatsApp"
+            >
               DE³ Tech
-            </span>
+            </a>
           </div>
         </div>
       </nav>
