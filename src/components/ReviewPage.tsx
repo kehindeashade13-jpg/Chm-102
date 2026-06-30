@@ -202,7 +202,7 @@ export default function ReviewPage({
                 {/* Options List */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
                   {q.options.map((opt, oIdx) => {
-                    const letter = ['A', 'B', 'C', 'D'][oIdx];
+                    const letter = String.fromCharCode(65 + oIdx);
                     const isCorrectOption = opt === q.correctAnswer;
                     const isSelectedByStudent = ans && ans.selected === opt;
 

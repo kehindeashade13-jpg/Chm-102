@@ -120,6 +120,9 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
         case 'd':
           if (opts[3]) setSelectedAnswers(prev => ({ ...prev, [q.id]: opts[3] }));
           break;
+        case 'e':
+          if (opts[4]) setSelectedAnswers(prev => ({ ...prev, [q.id]: opts[4] }));
+          break;
       }
     };
 
@@ -399,7 +402,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
           {/* Options Grid */}
           <div className="grid grid-cols-1 gap-3.5 pt-2">
             {currentOptions.map((opt, oIdx) => {
-              const letter = ['A', 'B', 'C', 'D'][oIdx];
+              const letter = String.fromCharCode(65 + oIdx);
               const isSelected = selectedAnswer === opt;
 
               return (

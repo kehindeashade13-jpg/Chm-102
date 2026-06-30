@@ -453,7 +453,7 @@ export default function PracticeMode({
         {/* Options Grid */}
         <div className="grid grid-cols-1 gap-3.5 pt-2">
           {currentOptions.map((opt, oIdx) => {
-            const letter = ['A', 'B', 'C', 'D'][oIdx];
+            const letter = String.fromCharCode(65 + oIdx);
             const isSelected = selectedAnswer === opt;
             const isCorrectOption = opt === currentQuestion.correctAnswer;
             
