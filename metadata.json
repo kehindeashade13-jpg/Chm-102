@@ -1,0 +1,6 @@
+{
+  "name": "CHM 102 Master",
+  "description": "A professional CBT practice and learning platform for 100-level Organic Chemistry students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
