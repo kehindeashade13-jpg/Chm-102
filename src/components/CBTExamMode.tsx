@@ -559,11 +559,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
 
       {showQuitConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-          <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6"
-          >
+          <div className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6 transform scale-100 opacity-100 transition-all">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl text-rose-500 flex-shrink-0">
                 <AlertTriangle className="w-6 h-6" />
@@ -587,6 +583,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
                 id="btn-confirm-quit-yes"
                 onClick={() => {
                   setShowQuitConfirm(false);
+                  setIsExamActive(false);
                   onCancel();
                 }}
                 className="px-4 py-2 text-sm font-bold text-white bg-rose-500 hover:bg-rose-600 rounded-xl shadow-md shadow-rose-500/10 transition-all cursor-pointer"
@@ -594,17 +591,13 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
                 Yes, Quit Exam
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
 
       {showSubmitConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-          <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6"
-          >
+          <div className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6 transform scale-100 opacity-100 transition-all">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 rounded-xl text-emerald-500 flex-shrink-0">
                 <Check className="w-6 h-6" />
@@ -645,7 +638,7 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
                 Submit Exam
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
     </>

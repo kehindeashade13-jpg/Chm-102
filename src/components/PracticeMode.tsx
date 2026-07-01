@@ -545,11 +545,7 @@ export default function PracticeMode({
 
       {showQuitConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-          <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6"
-          >
+          <div className="w-full max-w-md bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-xl space-y-6 transform scale-100 opacity-100 transition-all">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl text-rose-500 flex-shrink-0">
                 <AlertTriangle className="w-6 h-6" />
@@ -581,7 +577,7 @@ export default function PracticeMode({
                 Yes, Quit Session
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
     </>
