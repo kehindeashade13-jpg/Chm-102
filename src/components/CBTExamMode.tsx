@@ -7,17 +7,20 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'motion/react';
 import {
   Clock, Check, AlertTriangle, ArrowLeft, ArrowRight,
-  Flag, HelpCircle, FileText, Keyboard, Award
+  Flag, HelpCircle, FileText, Keyboard, Award, Trash2, Calendar
 } from 'lucide-react';
 import { Question, ExamResult } from '../types';
 import { BANK } from '../questions';
+import { getStoredResults } from '../storage';
 
 interface CBTExamModeProps {
   onFinishExam: (result: ExamResult) => void;
   onCancel: () => void;
+  onViewPastResult?: (result: ExamResult) => void;
+  onExamStateChange?: (running: boolean) => void;
 }
 
-export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps) {
+export default function CBTExamMode({ onFinishExam, onCancel, onViewPastResult, onExamStateChange }: CBTExamModeProps) {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [shuffledOptionsMap, setShuffledOptionsMap] = useState<Record<string, string[]>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,6 +34,17 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
   const [showShortcutsInfo, setShowShortcutsInfo] = useState(false);
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
+  const [pastResults, setPastResults] = useState<ExamResult[]>([]);
+
+  // Notify parent of active exam state
+  useEffect(() => {
+    onExamStateChange?.(isExamActive);
+  }, [isExamActive, onExamStateChange]);
+
+  // Load past results from storage
+  useEffect(() => {
+    setPastResults(getStoredResults());
+  }, [isExamActive]);
 
   // Helper to shuffle arrays
   const shuffleArray = <T,>(arr: T[]): T[] => {
@@ -340,6 +354,90 @@ export default function CBTExamMode({ onFinishExam, onCancel }: CBTExamModeProps
             <span>Launch Official CBT Exam</span>
           </button>
         </div>
+
+        {/* Past Exam History Section */}
+        {pastResults.length > 0 ? (
+          <div className="bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 shadow-sm space-y-4">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-indigo-500" />
+                <h3 className="text-base font-bold text-slate-900 dark:text-white">Past CBT & Practice History</h3>
+              </div>
+              <button
+                id="btn-clear-exam-history"
+                onClick={() => {
+                  if (confirm("Are you sure you want to clear your entire CBT history? This cannot be undone.")) {
+                    localStorage.removeItem('bio102_results_v1');
+                    setPastResults([]);
+                  }
+                }}
+                className="inline-flex items-center gap-1.5 text-xs text-rose-500 hover:text-rose-700 font-bold transition-colors cursor-pointer"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+                <span>Clear History</span>
+              </button>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr className="border-b border-slate-100 dark:border-slate-900 text-slate-400 font-mono font-bold">
+                    <th className="py-3 px-2">DATE</th>
+                    <th className="py-3 px-2">MODE</th>
+                    <th className="py-3 px-2 text-center">SCORE</th>
+                    <th className="py-3 px-2 text-center">GRADE</th>
+                    <th className="py-3 px-2 text-right">TIME USED</th>
+                    <th className="py-3 px-2 text-right">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-50 dark:divide-slate-900/40 text-slate-700 dark:text-slate-300">
+                  {pastResults.map((res, index) => (
+                    <tr key={res.id || index} className="hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
+                      <td className="py-3 px-2 font-medium flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                        {res.date}
+                      </td>
+                      <td className="py-3 px-2 font-mono">
+                        <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${res.mode === 'exam' ? 'bg-indigo-50 dark:bg-indigo-950/50 text-indigo-500' : 'bg-slate-100 dark:bg-slate-900 text-slate-500'}`}>
+                          {res.mode === 'exam' ? 'CBT Exam' : 'Practice'}
+                        </span>
+                      </td>
+                      <td className="py-3 px-2 text-center font-bold">
+                        {res.score} / {res.totalQuestions} ({res.percentage}%)
+                      </td>
+                      <td className="py-3 px-2 text-center">
+                        <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full font-black text-xs ${
+                          ['A', 'B'].includes(res.grade) ? 'bg-emerald-50 dark:bg-emerald-950 text-emerald-500' : 
+                          res.grade === 'C' ? 'bg-amber-50 dark:bg-amber-950 text-amber-500' : 'bg-rose-50 dark:bg-rose-950 text-rose-500'
+                        }`}>
+                          {res.grade}
+                        </span>
+                      </td>
+                      <td className="py-3 px-2 text-right font-mono">
+                        {Math.floor(res.timeUsed / 60)}m {res.timeUsed % 60}s
+                      </td>
+                      <td className="py-3 px-2 text-right">
+                        <button
+                          id={`btn-view-past-result-${res.id}`}
+                          onClick={() => onViewPastResult?.(res)}
+                          className="text-xs font-bold text-indigo-500 hover:text-indigo-700 dark:hover:text-indigo-400 underline cursor-pointer"
+                        >
+                          Review
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ) : (
+          <div className="bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-900 p-6 text-center text-sm text-slate-500 space-y-2 shadow-sm">
+            <Clock className="w-8 h-8 text-slate-300 dark:text-slate-700 mx-auto" />
+            <p className="font-semibold text-slate-700 dark:text-slate-300">No CBT Exam history yet.</p>
+            <p className="text-xs text-slate-400">Your official CBT exam scores and practice session history will appear here once completed.</p>
+          </div>
+        )}
       </div>
     );
   }

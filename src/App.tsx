@@ -38,6 +38,7 @@ export default function App() {
   const [badges, setBadges] = useState<Badge[]>(getStoredBadges());
   const [activeResult, setActiveResult] = useState<ExamResult | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
+  const [isExamRunning, setIsExamRunning] = useState(false);
   
   // Confetti trigger
   const [showConfetti, setShowConfetti] = useState(false);
@@ -69,11 +70,25 @@ export default function App() {
 
   // 3. Navigation callback
   const handleNavigate = (view: string) => {
+    if (isExamRunning) {
+      const confirmNav = window.confirm("You have an active exam running! Navigating away will lose all your progress. Are you sure you want to quit?");
+      if (!confirmNav) {
+        return;
+      }
+      setIsExamRunning(false);
+    }
     setCurrentView(view);
     setSelectedTopic(null);
   };
 
   const handleSelectTopicForPractice = (topic: string) => {
+    if (isExamRunning) {
+      const confirmNav = window.confirm("You have an active exam running! Navigating away will lose all your progress. Are you sure you want to quit?");
+      if (!confirmNav) {
+        return;
+      }
+      setIsExamRunning(false);
+    }
     setSelectedTopic(topic);
     setCurrentView('practice');
   };
@@ -125,6 +140,10 @@ export default function App() {
             onNavigate={handleNavigate}
             onSelectTopic={handleSelectTopicForPractice}
             onTriggerRandomQuestion={handleQuestionOfTheDay}
+            onViewPastResult={(result) => {
+              setActiveResult(result);
+              setCurrentView('results');
+            }}
           />
         );
       case 'topics':
@@ -147,8 +166,19 @@ export default function App() {
       case 'exam':
         return (
           <CBTExamMode
-            onFinishExam={handleFinishExamOrPractice}
-            onCancel={() => setCurrentView('landing')}
+            onFinishExam={(result) => {
+              setIsExamRunning(false);
+              handleFinishExamOrPractice(result);
+            }}
+            onCancel={() => {
+              setIsExamRunning(false);
+              setCurrentView('landing');
+            }}
+            onViewPastResult={(result) => {
+              setActiveResult(result);
+              setCurrentView('results');
+            }}
+            onExamStateChange={setIsExamRunning}
           />
         );
       case 'results':

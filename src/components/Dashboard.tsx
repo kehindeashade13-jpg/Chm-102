@@ -7,11 +7,11 @@ import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import {
   Flame, Award, Target, TrendingUp, ThumbsUp, ThumbsDown,
-  BookOpen, Star, AlertTriangle, Play, HelpCircle, GraduationCap, CheckCircle
+  BookOpen, Star, AlertTriangle, Play, HelpCircle, GraduationCap, CheckCircle, Clock
 } from 'lucide-react';
-import { UserStats, Badge } from '../types';
+import { UserStats, Badge, ExamResult } from '../types';
 import { BANK } from '../questions';
-import { getWeakestAndStrongestTopic } from '../storage';
+import { getWeakestAndStrongestTopic, getStoredResults } from '../storage';
 
 interface DashboardProps {
   stats: UserStats;
@@ -19,9 +19,14 @@ interface DashboardProps {
   onNavigate: (view: string) => void;
   onSelectTopic: (topic: string) => void;
   onTriggerRandomQuestion: () => void;
+  onViewPastResult?: (result: ExamResult) => void;
 }
 
-export default function Dashboard({ stats, badges, onNavigate, onSelectTopic, onTriggerRandomQuestion }: DashboardProps) {
+export default function Dashboard({ stats, badges, onNavigate, onSelectTopic, onTriggerRandomQuestion, onViewPastResult }: DashboardProps) {
+  const pastResults = useMemo(() => {
+    return getStoredResults();
+  }, [stats]);
+
   const answeredCount = stats.totalCorrect + stats.totalWrong;
   const accuracy = answeredCount > 0 ? Math.round((stats.totalCorrect / answeredCount) * 100) : 0;
   
@@ -311,6 +316,86 @@ export default function Dashboard({ stats, badges, onNavigate, onSelectTopic, on
             });
           }, [stats])}
         </div>
+      </div>
+
+      {/* Past CBT & Practice History Section */}
+      <div className="bg-white dark:bg-slate-950 p-6 rounded-2xl border border-slate-100 dark:border-slate-900 shadow-sm space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Clock className="w-5 h-5 text-indigo-500" />
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Past CBT & Practice History</h2>
+          </div>
+          <button
+            id="dashboard-btn-go-exam"
+            onClick={() => onNavigate('exam')}
+            className="text-xs font-mono text-indigo-500 hover:underline font-semibold cursor-pointer"
+          >
+            Start New CBT
+          </button>
+        </div>
+
+        {pastResults.length > 0 ? (
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr className="border-b border-slate-100 dark:border-slate-900 text-slate-400 font-mono font-bold">
+                  <th className="py-2.5 px-2">DATE</th>
+                  <th className="py-2.5 px-2">MODE</th>
+                  <th className="py-2.5 px-2 text-center">SCORE</th>
+                  <th className="py-2.5 px-2 text-center">GRADE</th>
+                  <th className="py-2.5 px-2 text-right">TIME USED</th>
+                  <th className="py-2.5 px-2 text-right">ACTION</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-50 dark:divide-slate-900/40 text-slate-700 dark:text-slate-300">
+                {pastResults.slice(0, 5).map((res, index) => (
+                  <tr key={res.id || index} className="hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
+                    <td className="py-2.5 px-2 font-medium">
+                      {res.date}
+                    </td>
+                    <td className="py-2.5 px-2 font-mono">
+                      <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${res.mode === 'exam' ? 'bg-indigo-50 dark:bg-indigo-950/50 text-indigo-500' : 'bg-slate-100 dark:bg-slate-900 text-slate-500'}`}>
+                        {res.mode === 'exam' ? 'CBT' : 'Practice'}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-2 text-center font-bold">
+                      {res.score} / {res.totalQuestions} ({res.percentage}%)
+                    </td>
+                    <td className="py-2.5 px-2 text-center">
+                      <span className={`inline-flex items-center justify-center w-5.5 h-5.5 rounded-full font-black text-[10px] ${
+                        ['A', 'B'].includes(res.grade) ? 'bg-emerald-50 dark:bg-emerald-950 text-emerald-500' : 
+                        res.grade === 'C' ? 'bg-amber-50 dark:bg-amber-950 text-amber-500' : 'bg-rose-50 dark:bg-rose-950 text-rose-500'
+                      }`}>
+                        {res.grade}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-2 text-right font-mono">
+                      {Math.floor(res.timeUsed / 60)}m {res.timeUsed % 60}s
+                    </td>
+                    <td className="py-2.5 px-2 text-right">
+                      <button
+                        id={`dashboard-btn-view-${res.id}`}
+                        onClick={() => onViewPastResult?.(res)}
+                        className="text-xs font-bold text-indigo-500 hover:text-indigo-700 dark:hover:text-indigo-400 underline cursor-pointer"
+                      >
+                        Review
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {pastResults.length > 5 && (
+              <p className="text-[11px] text-slate-400 text-center mt-3">
+                Showing the 5 most recent attempts. Go to <strong>CBT Exam</strong> to view full history of {pastResults.length} practices.
+              </p>
+            )}
+          </div>
+        ) : (
+          <div className="bg-slate-50/50 dark:bg-slate-950/30 rounded-xl border border-dashed border-slate-100 dark:border-slate-900 p-6 text-center text-xs text-slate-400">
+            No completed sessions found. Practice topics or launch a CBT exam to populate your statistics!
+          </div>
+        )}
       </div>
     </div>
   );
